@@ -1,23 +1,18 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { IonicModule } from '@ionic/angular';
-import { FormsModule } from '@angular/forms';
-import { RouterModule } from '@angular/router';
-
-import { HomePage } from './home.page';
+import { TabBarComponent } from './tab-bar/tab-bar.component';
+import { HomeContentComponent } from './home-content/home-content.component';
+import { HomeRoutingModule } from './home-routing.module';
+import { LabelBarComponent } from './label-bar/label-bar.component';
 
 @NgModule({
+  declarations: [
+    TabBarComponent, 
+    HomeContentComponent, LabelBarComponent
+  ],
   imports: [
     CommonModule,
-    FormsModule,
-    IonicModule,
-    RouterModule.forChild([
-      {
-        path: '',
-        component: HomePage
-      }
-    ])
-  ],
-  declarations: [HomePage]
+    HomeRoutingModule
+  ]
 })
-export class HomePageModule {}
+export class HomeModule { }

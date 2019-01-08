@@ -17,5 +17,8 @@
       "es2018",
       "dom"
     ]
+  },
+  "compilerOptions": {
+    "experimentalDecorators": true
   }
 }

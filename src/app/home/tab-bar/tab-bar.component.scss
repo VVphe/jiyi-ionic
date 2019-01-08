@@ -1,0 +1,17 @@
+.jiyi-tab {
+    font-size: 16px;
+    color: #666666;
+    margin: 16px 8px;
+    min-width: 48px;
+    max-width: 48px;
+    padding: 8px 0px;
+    white-space: nowrap;
+}
+
+.jiyi-tabs-container {
+    overflow-x: scroll;
+}
+
+.jiyi-tabs-container::-webkit-scrollbar {
+    visibility: hidden;
+}

@@ -9,3 +9,28 @@
 @import '~@ionic/angular/css/text-alignment.css';
 @import '~@ionic/angular/css/text-transformation.css';
 @import '~@ionic/angular/css/flex-utils.css';
+
+html {
+    margin-top: 16px;
+}
+
+.main-container {
+    display: flex;
+    flex-direction: column;
+    height: calc(100% - 32px);
+}
+
+header {
+    flex: 0 1 auto;
+    width: 100%;
+}
+
+main {
+    flex: 1 0 auto;
+    width: 100%;
+}
+
+footer {
+    flex: 0 1 auto;
+    width: 100%;
+}
