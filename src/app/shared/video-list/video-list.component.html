@@ -1,0 +1,13 @@
+<div class="video-list-container">
+  <div>
+    <div class="video-list-header">
+      <span>{{category}}</span>
+      <i class="iconfont icon-icon_arrow_right"></i>
+    </div>
+    <app-video-item></app-video-item>
+  </div>
+  <app-video-thumbnail 
+    *ngFor="let videoItem of videoList; let i = index" 
+    *ngIf="index > 0 && 3 > index">
+  </app-video-thumbnail>
+</div>
