@@ -16,7 +16,10 @@ import { VideoThumbnailComponent } from './video-thumbnail/video-thumbnail.compo
     CommonModule
   ],
   exports: [
-    VideoListComponent
+    VideoListComponent,
+    EveryPickComponent,
+    VideoItemComponent,
+    VideoThumbnailComponent
   ]
 })
 export class SharedModule { }

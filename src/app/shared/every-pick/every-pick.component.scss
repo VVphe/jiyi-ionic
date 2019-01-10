@@ -1,0 +1,20 @@
+.everyday-pick-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-bottom: 8px;
+}
+
+.everyday-pick-header > span {
+    font-size: 24px;
+    color: #333333;
+}
+
+.everyday-pick-header > div > span,
+.everyday-pick-header > div > i {
+    font-size: 14px;
+    color: #FFA600;
+}
+.everyday-pick-header > div > i {
+    margin-left: 12px;
+}

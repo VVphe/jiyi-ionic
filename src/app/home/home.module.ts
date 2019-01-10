@@ -6,15 +6,18 @@ import { HomeRoutingModule } from './home-routing.module';
 import { LabelBarComponent } from './label-bar/label-bar.component';
 import { RouteReuseStrategy } from '@angular/router';
 import { IonicRouteStrategy } from '@ionic/angular';
+import { RecommendComponent } from './recommend/recommend.component';
+import { SharedModule } from '../shared/shared.module';
 
 @NgModule({
   declarations: [
     TabBarComponent, 
-    HomeContentComponent, LabelBarComponent
+    HomeContentComponent, LabelBarComponent, RecommendComponent
   ],
   imports: [
     CommonModule,
-    HomeRoutingModule
+    HomeRoutingModule,
+    SharedModule
   ],
   providers: [
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy }

@@ -12,7 +12,40 @@ export class TabBarComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
-    this.tabs = ['关注', '发现', '推荐', '校园', '科技', '生活', '音乐', '运动']
+    this.tabs = [
+      {
+        name: '关注',
+        tabType: 'concern'
+      }, 
+      {
+        name: '发现',
+        tabType: 'finder'
+      }, 
+      {
+        name: '推荐',
+        tabType: 'recommend'
+      }, 
+      {
+        name: '校园',
+        tabType: 'campus'
+      },
+      {
+        name: '科技',
+        tabType: 'technology'
+      },
+      {
+        name: '生活',
+        tabType: 'life'
+      },
+      {
+        name: '音乐',
+        tabType: 'music'
+      },
+      {
+        name: '运动',
+        tabType: 'sport'
+      },
+    ]
   }
 
 }

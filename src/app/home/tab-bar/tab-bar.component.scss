@@ -1,17 +1,30 @@
 .jiyi-tab {
-    font-size: 16px;
-    color: #666666;
-    margin: 16px 8px;
-    min-width: 48px;
-    max-width: 48px;
-    padding: 8px 0px;
+    font-size: 15px;
+    color: #030303;
+    margin: 4px 12px;
+    width: 30px;
+    padding: 0;
     white-space: nowrap;
+    text-align: center;
+    outline: none;
+    background-color: #ffffff;
 }
 
 .jiyi-tabs-container {
     overflow-x: scroll;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.jiyi-tabs-container .jiyi-tab:first-child {
+    margin-left: 0;
 }
 
 .jiyi-tabs-container::-webkit-scrollbar {
     visibility: hidden;
+}
+
+.active {
+    border-bottom: 2px solid #FFA600;
 }
