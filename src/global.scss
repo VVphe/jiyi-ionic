@@ -30,6 +30,8 @@ main {
     flex: 1 0 auto;
     width: calc(100% - 32px);
     margin:  0 16px 8px;
+    height: 100px;
+    overflow-y: scroll;
 }
 
 footer {

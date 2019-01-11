@@ -1,5 +1,8 @@
 <div class="recommend-container">
-  <div class="everyday-pick-container">
-    <app-every-pick></app-every-pick>
+  <div class="everyday-pick-container" *ngIf="everydayPickVideo">
+    <app-every-pick [videoInfo]="everydayPickVideo"></app-every-pick>
+  </div>
+  <div class="category-list-container" *ngFor="let video of videoList">
+    <app-video-list [videoList]="video"></app-video-list>
   </div>
 </div>

@@ -1,7 +1,7 @@
-<div *ngFor="let videoItem of videoList; let i = index">
-  <img src="../../../assets/icon/page-1.png">
+<div>
+  <img [src]="videoInfo.thumbnailUri">
   <div class="video-desc">
-    <span>title</span>
-    <span>description</span>
+    <span>{{videoInfo.title}}</span>
+    <span>{{videoInfo.description}}</span>
   </div>
 </div>

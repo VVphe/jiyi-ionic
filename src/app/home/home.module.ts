@@ -7,6 +7,7 @@ import { LabelBarComponent } from './label-bar/label-bar.component';
 import { RouteReuseStrategy } from '@angular/router';
 import { IonicRouteStrategy } from '@ionic/angular';
 import { RecommendComponent } from './recommend/recommend.component';
+import { HttpClientModule }    from '@angular/common/http';
 import { SharedModule } from '../shared/shared.module';
 
 @NgModule({
@@ -17,7 +18,8 @@ import { SharedModule } from '../shared/shared.module';
   imports: [
     CommonModule,
     HomeRoutingModule,
-    SharedModule
+    SharedModule,
+    HttpClientModule
   ],
   providers: [
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy }

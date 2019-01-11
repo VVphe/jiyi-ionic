@@ -1,13 +1,14 @@
 <div class="video-list-container">
   <div>
     <div class="video-list-header">
-      <span>{{category}}</span>
-      <i class="iconfont icon-icon_arrow_right"></i>
+      <span>{{videoList.category}}</span>
+      <i class="icon icon-icon_arrow_right"></i>
     </div>
-    <app-video-item></app-video-item>
+    <app-video-item [videoInfo]="firstVideo"></app-video-item>
   </div>
   
   <app-video-thumbnail 
-    *ngFor="let videoItem of videoList; let i = index">
+    *ngFor="let videoItem of restVideo"
+    [videoInfo]="videoItem">
   </app-video-thumbnail>
 </div>

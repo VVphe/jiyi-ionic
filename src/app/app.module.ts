@@ -20,7 +20,8 @@ import { AppRoutingModule } from './app-routing.module';
   providers: [
     StatusBar,
     SplashScreen,
-    { provide: RouteReuseStrategy, useClass: IonicRouteStrategy }
+    { provide: RouteReuseStrategy, useClass: IonicRouteStrategy },
+    { provide: 'nodeUrl', useValue: 'http://localhost:5000' }
   ],
   bootstrap: [AppComponent]
 })

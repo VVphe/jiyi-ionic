@@ -1,12 +1,12 @@
 <div>
   <div class="video-list-thumbnail">
-    <img src="../../../assets/icon/page-1.png">
+    <img [src]="videoInfo.thumbnailUri">
   </div>
   <div class="video-list-footer">
-    <img src="../../../assets/icon/page-1.png">
+    <img [src]="videoInfo.avatorUri">
     <div class="video-desc">
-      <span>title</span>
-      <span>description</span>
+      <span>{{videoInfo.title}}</span>
+      <span>{{videoInfo.description}}</span>
     </div>
   </div>
 </div>

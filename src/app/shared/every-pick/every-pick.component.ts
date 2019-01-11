@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-every-pick',
@@ -6,6 +6,9 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./every-pick.component.scss']
 })
 export class EveryPickComponent implements OnInit {
+
+  @Input()
+  videoInfo: any;
 
   constructor() { }
 

@@ -13,9 +13,14 @@ export class VideoListComponent implements OnInit {
   @Input()
   videoList: any;
 
+  firstVideo: any;
+  restVideo: any;
+
   constructor() { }
 
   ngOnInit() {
+    [this.firstVideo, ...this.restVideo] = this.videoList.videos;
+    console.log(this.restVideo);
   }
 
 }
