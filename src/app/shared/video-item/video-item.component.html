@@ -3,7 +3,7 @@
     <img [src]="videoInfo.thumbnailUri">
   </div>
   <div class="video-list-footer">
-    <img [src]="videoInfo.avatorUri">
+    <img [src]="videoInfo.avatorUri" (click)="showUserInfo($event)">
     <div class="video-desc">
       <span>{{videoInfo.title}}</span>
       <span>{{videoInfo.description}}</span>

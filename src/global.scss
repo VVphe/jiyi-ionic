@@ -11,13 +11,15 @@
 @import '~@ionic/angular/css/flex-utils.css';
 
 html {
-    margin-top: 16px;
+    // margin-top: 16px;
 }
 
+.video-play-container,
 .main-container {
     display: flex;
     flex-direction: column;
-    height: calc(100% - 16px);
+    padding-top: 16px;
+    height: 100%;
 }
 
 header {

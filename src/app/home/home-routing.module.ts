@@ -11,7 +11,7 @@ const routes: Routes = [
         path: '', 
         component: HomeContentComponent ,
         children: [
-            {path: '', redirectTo: 'finder', pathMatch: 'full'},
+            {path: '', redirectTo: 'recommend', pathMatch: 'full'},
             {path: 'recommend', component: RecommendComponent},
             {path: 'finder', component: FinderComponent},
             {path: ':category', component: ListByCategoryComponent}

@@ -10,6 +10,7 @@ export class VideoService {
 
   getEverydayVideo() {
     return {
+      "id": "2356",
       "title" : "test",
       "author" : "vv",
       "thumbnailUri" : "../../../assets/icon/page-1.png",

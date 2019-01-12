@@ -15,7 +15,11 @@ import { ListByCategoryComponent } from './list-by-category/list-by-category.com
 @NgModule({
   declarations: [
     TabBarComponent, 
-    HomeContentComponent, LabelBarComponent, RecommendComponent, FinderComponent, ListByCategoryComponent
+    HomeContentComponent, 
+    LabelBarComponent, 
+    RecommendComponent, 
+    FinderComponent, 
+    ListByCategoryComponent
   ],
   imports: [
     CommonModule,
