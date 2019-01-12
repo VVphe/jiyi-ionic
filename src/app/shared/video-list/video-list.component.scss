@@ -1,0 +1,17 @@
+.video-list-header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 8px;
+}
+
+.video-list-header > span {
+    font-size: 20px;
+    color: #333333;
+}
+
+.video-list-header .icon-icon_arrow_right {
+    color: #FFA600;
+    font-size: 14px;
+}

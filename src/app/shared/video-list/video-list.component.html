@@ -1,7 +1,7 @@
 <div class="video-list-container">
   <div>
     <div class="video-list-header">
-      <span>{{videoList.category}}</span>
+      <span>{{videoList.category | translate }}</span>
       <i class="icon icon-icon_arrow_right"></i>
     </div>
     <app-video-item [videoInfo]="firstVideo"></app-video-item>

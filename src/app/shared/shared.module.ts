@@ -4,13 +4,15 @@ import { VideoListComponent } from './video-list/video-list.component';
 import { EveryPickComponent } from './every-pick/every-pick.component';
 import { VideoItemComponent } from './video-item/video-item.component';
 import { VideoThumbnailComponent } from './video-thumbnail/video-thumbnail.component';
+import { TranslatePipe } from './translate.pipe';
 
 @NgModule({
   declarations: [
     VideoListComponent,
     EveryPickComponent,
     VideoItemComponent,
-    VideoThumbnailComponent
+    VideoThumbnailComponent,
+    TranslatePipe
   ],
   imports: [
     CommonModule
@@ -19,7 +21,8 @@ import { VideoThumbnailComponent } from './video-thumbnail/video-thumbnail.compo
     VideoListComponent,
     EveryPickComponent,
     VideoItemComponent,
-    VideoThumbnailComponent
+    VideoThumbnailComponent,
+    TranslatePipe
   ]
 })
 export class SharedModule { }

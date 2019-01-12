@@ -1,0 +1,28 @@
+.video-thumbnail-container {
+    display: flex;
+    flex-direction: row;
+    padding: 4px 0;
+}
+
+.video-thumbnail-container img {
+    width: 160px;
+    height: 90px;
+    border-radius: 4px;
+}
+
+.video-thumbnail-container .video-desc {
+    padding: 8px 16px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.video-thumbnail-container .video-desc > span:first-child {
+    font-size: 14px;
+    color: #333333;
+}
+
+.video-thumbnail-container .video-desc > span:last-child {
+    font-size: 12px;
+    color: #666666;
+}
