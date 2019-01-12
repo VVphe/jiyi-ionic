@@ -3,6 +3,10 @@
     <app-every-pick [videoInfo]="everydayPickVideo"></app-every-pick>
   </div>
   <div class="category-list-container" *ngFor="let video of videoList">
-    <app-video-list [videoList]="video"></app-video-list>
+    <div class="category-list-header">
+      <span>{{video.category | translate }}</span>
+      <i class="icon icon-icon_arrow_right"></i>
+    </div>
+    <app-video-list [videoList]="video.videos"></app-video-list>
   </div>
 </div>

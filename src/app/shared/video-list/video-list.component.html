@@ -1,11 +1,11 @@
 <div class="video-list-container">
-  <div>
-    <div class="video-list-header">
+  <!-- <div> -->
+    <!-- <div class="video-list-header">
       <span>{{videoList.category | translate }}</span>
       <i class="icon icon-icon_arrow_right"></i>
-    </div>
+    </div> -->
     <app-video-item [videoInfo]="firstVideo"></app-video-item>
-  </div>
+  <!-- </div> -->
   
   <app-video-thumbnail 
     *ngFor="let videoItem of restVideo"

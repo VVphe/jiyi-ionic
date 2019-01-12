@@ -8,9 +8,6 @@ import { Component, OnInit, Input } from '@angular/core';
 export class VideoListComponent implements OnInit {
 
   @Input()
-  category: string;
-
-  @Input()
   videoList: any;
 
   firstVideo: any;
@@ -19,7 +16,7 @@ export class VideoListComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
-    [this.firstVideo, ...this.restVideo] = this.videoList.videos;
+    [this.firstVideo, ...this.restVideo] = this.videoList;
     console.log(this.restVideo);
   }
 

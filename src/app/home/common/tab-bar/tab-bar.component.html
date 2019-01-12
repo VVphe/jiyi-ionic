@@ -2,6 +2,6 @@
 <div class="jiyi-tabs-container">
   <button 
     class="jiyi-tab" *ngFor="let tab of tabs" 
-    [routerLink]="[ '/home/' + tab.tabType ]"
+    [routerLink]="[ '/home', tab.tabType ]"
     routerLinkActive="active">{{tab.name}}</button>
 </div>

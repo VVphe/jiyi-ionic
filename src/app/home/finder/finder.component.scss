@@ -1,0 +1,61 @@
+.finder-category-list-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-bottom: 8px;
+}
+
+.finder-ranking-list-header {
+    margin-top: 24px;
+}
+
+.finder-ranking-list-header > span,
+.finder-category-list-header > span {
+    font-size: 24px;
+    color: #333333;
+}
+
+.finder-category-list-header > div > span,
+.finder-category-list-header > div > i {
+    font-size: 14px;
+    color: #FFA600;
+}
+.finder-category-list-header > div > i {
+    margin-left: 12px;
+}
+
+.finder-category-list {
+    display: flex;
+    flex-direction: row;
+    overflow-x: scroll;
+    border-bottom:  1px solid rgba(0,0,0,0.10);
+}
+.finder-category-list > div {
+    min-width: 108px;
+    height: 108px;
+    position: relative;
+}
+.finder-category-list > div:not(:first-child) {
+    margin-left: 8px;
+}
+.finder-category-list img {
+    width: 100%;
+    height: 100%;
+    border-radius: 4px;
+}
+.finder-category-list > div > span {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 18px;
+    color: #ffffff;
+}
+
+.finder-category-list::-webkit-scrollbar {
+    visibility: hidden;
+}
+
+.finder-ranking-video {
+    margin-top: 8px;
+}

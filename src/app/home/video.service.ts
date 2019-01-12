@@ -26,6 +26,7 @@ export class VideoService {
         category: 'music',
         videos: [
           {
+            "id": 1,
             "title" : "test",
             "author" : "vv",
             "thumbnailUri" : "../../../assets/icon/page-1.png",
@@ -34,6 +35,7 @@ export class VideoService {
             "publishTime" : "2019-01-01 08:08:08",
           },
           {
+            "id": 2,
             "title" : "test",
             "author" : "vv",
             "thumbnailUri" : "../../../assets/icon/page-1.png",
@@ -42,6 +44,7 @@ export class VideoService {
             "publishTime" : "2019-01-01 08:08:08",
           },
           {
+            "id": 3,
             "title" : "test",
             "author" : "vv",
             "thumbnailUri" : "../../../assets/icon/page-1.png",
@@ -55,6 +58,7 @@ export class VideoService {
         category: 'sport',
         videos: [
           {
+            "id": 4,
             "title" : "test",
             "author" : "vv",
             "thumbnailUri" : "../../../assets/icon/page-1.png",
@@ -63,6 +67,7 @@ export class VideoService {
             "publishTime" : "2019-01-01 08:08:08",
           },
           {
+            "id": 5,
             "title" : "test",
             "author" : "vv",
             "thumbnailUri" : "../../../assets/icon/page-1.png",
@@ -76,6 +81,7 @@ export class VideoService {
         category: 'campus',
         videos: [
           {
+            "id": 6,
             "title" : "test",
             "author" : "vv",
             "thumbnailUri" : "../../../assets/icon/page-1.png",
@@ -84,6 +90,7 @@ export class VideoService {
             "publishTime" : "2019-01-01 08:08:08",
           },
           {
+            "id": 7,
             "title" : "test",
             "author" : "vv",
             "thumbnailUri" : "../../../assets/icon/page-1.png",
@@ -92,6 +99,7 @@ export class VideoService {
             "publishTime" : "2019-01-01 08:08:08",
           },
           {
+            "id": 8,
             "title" : "test",
             "author" : "vv",
             "thumbnailUri" : "../../../assets/icon/page-1.png",
@@ -101,6 +109,260 @@ export class VideoService {
           },
         ]
       }
+    ]
+  }
+
+  getRankingVideos() {
+    return [
+      {
+        "id": 1,
+        "title" : "test",
+        "author" : "vv",
+        "thumbnailUri" : "../../../assets/icon/page-1.png",
+        "avatorUri": "../../../assets/icon/page-1.png",
+        "description" : "test",
+        "publishTime" : "2019-01-01 08:08:08",
+      },
+      {
+        "id": 2,
+        "title" : "test",
+        "author" : "vv",
+        "thumbnailUri" : "../../../assets/icon/page-1.png",
+        "avatorUri": "../../../assets/icon/page-1.png",
+        "description" : "test",
+        "publishTime" : "2019-01-01 08:08:08",
+      },
+      {
+        "id": 3,
+        "title" : "test",
+        "author" : "vv",
+        "thumbnailUri" : "../../../assets/icon/page-1.png",
+        "avatorUri": "../../../assets/icon/page-1.png",
+        "description" : "test",
+        "publishTime" : "2019-01-01 08:08:08",
+      },
+      {
+        "id": 4,
+        "title" : "test",
+        "author" : "vv",
+        "thumbnailUri" : "../../../assets/icon/page-1.png",
+        "avatorUri": "../../../assets/icon/page-1.png",
+        "description" : "test",
+        "publishTime" : "2019-01-01 08:08:08",
+      },
+      {
+        "id": 5,
+        "title" : "test",
+        "author" : "vv",
+        "thumbnailUri" : "../../../assets/icon/page-1.png",
+        "avatorUri": "../../../assets/icon/page-1.png",
+        "description" : "test",
+        "publishTime" : "2019-01-01 08:08:08",
+      },
+      {
+        "id": 6,
+        "title" : "test",
+        "author" : "vv",
+        "thumbnailUri" : "../../../assets/icon/page-1.png",
+        "avatorUri": "../../../assets/icon/page-1.png",
+        "description" : "test",
+        "publishTime" : "2019-01-01 08:08:08",
+      },
+      {
+        "id": 7,
+        "title" : "test",
+        "author" : "vv",
+        "thumbnailUri" : "../../../assets/icon/page-1.png",
+        "avatorUri": "../../../assets/icon/page-1.png",
+        "description" : "test",
+        "publishTime" : "2019-01-01 08:08:08",
+      },
+      {
+        "id": 8,
+        "title" : "test",
+        "author" : "vv",
+        "thumbnailUri" : "../../../assets/icon/page-1.png",
+        "avatorUri": "../../../assets/icon/page-1.png",
+        "description" : "test",
+        "publishTime" : "2019-01-01 08:08:08",
+      },
+      {
+        "id": 9,
+        "title" : "test",
+        "author" : "vv",
+        "thumbnailUri" : "../../../assets/icon/page-1.png",
+        "avatorUri": "../../../assets/icon/page-1.png",
+        "description" : "test",
+        "publishTime" : "2019-01-01 08:08:08",
+      },
+      {
+        "id": 10,
+        "title" : "test",
+        "author" : "vv",
+        "thumbnailUri" : "../../../assets/icon/page-1.png",
+        "avatorUri": "../../../assets/icon/page-1.png",
+        "description" : "test",
+        "publishTime" : "2019-01-01 08:08:08",
+      }
+    ]
+  }
+
+  getLatestPopularVideos(category: string) {
+    return [
+      {
+        "id": 6,
+        "title" : "test",
+        "author" : "vv",
+        "thumbnailUri" : "../../../assets/icon/page-1.png",
+        "avatorUri": "../../../assets/icon/page-1.png",
+        "description" : "test",
+        "publishTime" : "2019-01-01 08:08:08",
+      },
+      {
+        "id": 7,
+        "title" : "test",
+        "author" : "vv",
+        "thumbnailUri" : "../../../assets/icon/page-1.png",
+        "avatorUri": "../../../assets/icon/page-1.png",
+        "description" : "test",
+        "publishTime" : "2019-01-01 08:08:08",
+      },
+      {
+        "id": 8,
+        "title" : "test",
+        "author" : "vv",
+        "thumbnailUri" : "../../../assets/icon/page-1.png",
+        "avatorUri": "../../../assets/icon/page-1.png",
+        "description" : "test",
+        "publishTime" : "2019-01-01 08:08:08",
+      },
+    ]
+  }
+
+  getPopularVideos(category: string) {
+    return [
+      {
+        "id": 6,
+        "title" : "test",
+        "author" : "vv",
+        "thumbnailUri" : "../../../assets/icon/page-1.png",
+        "avatorUri": "../../../assets/icon/page-1.png",
+        "description" : "test",
+        "publishTime" : "2019-01-01 08:08:08",
+      },
+      {
+        "id": 7,
+        "title" : "test",
+        "author" : "vv",
+        "thumbnailUri" : "../../../assets/icon/page-1.png",
+        "avatorUri": "../../../assets/icon/page-1.png",
+        "description" : "test",
+        "publishTime" : "2019-01-01 08:08:08",
+      },
+      {
+        "id": 8,
+        "title" : "test",
+        "author" : "vv",
+        "thumbnailUri" : "../../../assets/icon/page-1.png",
+        "avatorUri": "../../../assets/icon/page-1.png",
+        "description" : "test",
+        "publishTime" : "2019-01-01 08:08:08",
+      },
+    ]
+  }
+
+  getLatestVideos(category: string) {
+    return [
+      {
+        "id": 1,
+        "title" : "test",
+        "author" : "vv",
+        "thumbnailUri" : "../../../assets/icon/page-1.png",
+        "avatorUri": "../../../assets/icon/page-1.png",
+        "description" : "test",
+        "publishTime" : "2019-01-01 08:08:08",
+      },
+      {
+        "id": 2,
+        "title" : "test",
+        "author" : "vv",
+        "thumbnailUri" : "../../../assets/icon/page-1.png",
+        "avatorUri": "../../../assets/icon/page-1.png",
+        "description" : "test",
+        "publishTime" : "2019-01-01 08:08:08",
+      },
+      {
+        "id": 3,
+        "title" : "test",
+        "author" : "vv",
+        "thumbnailUri" : "../../../assets/icon/page-1.png",
+        "avatorUri": "../../../assets/icon/page-1.png",
+        "description" : "test",
+        "publishTime" : "2019-01-01 08:08:08",
+      },
+      {
+        "id": 4,
+        "title" : "test",
+        "author" : "vv",
+        "thumbnailUri" : "../../../assets/icon/page-1.png",
+        "avatorUri": "../../../assets/icon/page-1.png",
+        "description" : "test",
+        "publishTime" : "2019-01-01 08:08:08",
+      },
+      {
+        "id": 5,
+        "title" : "test",
+        "author" : "vv",
+        "thumbnailUri" : "../../../assets/icon/page-1.png",
+        "avatorUri": "../../../assets/icon/page-1.png",
+        "description" : "test",
+        "publishTime" : "2019-01-01 08:08:08",
+      },
+      {
+        "id": 6,
+        "title" : "test",
+        "author" : "vv",
+        "thumbnailUri" : "../../../assets/icon/page-1.png",
+        "avatorUri": "../../../assets/icon/page-1.png",
+        "description" : "test",
+        "publishTime" : "2019-01-01 08:08:08",
+      },
+      {
+        "id": 7,
+        "title" : "test",
+        "author" : "vv",
+        "thumbnailUri" : "../../../assets/icon/page-1.png",
+        "avatorUri": "../../../assets/icon/page-1.png",
+        "description" : "test",
+        "publishTime" : "2019-01-01 08:08:08",
+      },
+      {
+        "id": 8,
+        "title" : "test",
+        "author" : "vv",
+        "thumbnailUri" : "../../../assets/icon/page-1.png",
+        "avatorUri": "../../../assets/icon/page-1.png",
+        "description" : "test",
+        "publishTime" : "2019-01-01 08:08:08",
+      },
+      {
+        "id": 9,
+        "title" : "test",
+        "author" : "vv",
+        "thumbnailUri" : "../../../assets/icon/page-1.png",
+        "avatorUri": "../../../assets/icon/page-1.png",
+        "description" : "test",
+        "publishTime" : "2019-01-01 08:08:08",
+      },
+      {
+        "id": 10,
+        "title" : "test",
+        "author" : "vv",
+        "thumbnailUri" : "../../../assets/icon/page-1.png",
+        "avatorUri": "../../../assets/icon/page-1.png",
+        "description" : "test",
+        "publishTime" : "2019-01-01 08:08:08",
+      },
     ]
   }
 }

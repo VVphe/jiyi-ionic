@@ -1,0 +1,21 @@
+<div class="finder-container">
+  <div class="finder-category-list-header">
+    <span>热门分类</span>
+    <div>
+      <span>查看全部</span>
+      <i class="icon icon-icon_arrow_right"></i>
+    </div>
+  </div>
+  <div class="finder-category-list">
+    <div *ngFor="let category of categoryList">
+      <img [src]="category.img">
+      <span>{{category.name}}</span>
+    </div>
+  </div>
+  <div class="finder-ranking-list-header">
+    <span>本周排行</span>
+  </div>
+  <div class="finder-ranking-video" *ngFor="let video of rankingVideos">
+    <app-video-item [videoInfo]="video"></app-video-item>
+  </div>
+</div>

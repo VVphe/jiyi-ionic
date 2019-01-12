@@ -10,3 +10,21 @@
 .category-list-container:not(:last-child) {
     border-bottom: 1px solid rgba(0,0,0,0.10);
 }
+
+.category-list-header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 8px;
+}
+
+.category-list-header > span {
+    font-size: 20px;
+    color: #333333;
+}
+
+.category-list-header .icon-icon_arrow_right {
+    color: #FFA600;
+    font-size: 14px;
+}
