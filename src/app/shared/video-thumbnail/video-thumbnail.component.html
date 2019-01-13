@@ -1,7 +1,7 @@
 <div class="video-thumbnail-container">
   <img [src]="videoInfo.thumbnailUri">
   <div class="video-desc">
-    <span>{{videoInfo.title}}</span>
-    <span>{{videoInfo.description}}</span>
+    <span class="title" [ngStyle]="{'color': titleColor}">{{videoInfo.title}}</span>
+    <span class="description" [ngStyle]="{'color': descColor}">{{videoInfo.description}}</span>
   </div>
 </div>

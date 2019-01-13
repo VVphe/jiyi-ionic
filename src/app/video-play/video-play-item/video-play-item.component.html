@@ -1,5 +1,37 @@
-<div class="video-play-item-container">
-  <img [src]="videoInfo.thumbnailUri">
-  <span>{{videoInfo.title}}</span>
-  <span>{{videoInfo.description}}</span>
-</div>
+<vg-player (onPlayerReady)="onPlayerReady($event)">
+  <div class="video-play-item-container">
+    <div class="video-entity">
+      <img [src]="videoInfo.thumbnailUri" *ngIf="!isPlaying">
+      <i class="icon icon-icon_arrow_right" (click)="play()"></i>
+    </div>
+    <video 
+      [hidden]="!isPlaying"
+      [vgMedia]="media" 
+      #media
+      id="singleVideo" 
+      preload="auto" 
+      controls 
+      style="height:224px;width:100%;"
+      [ngStyle]="{'z-index': isPlaying ? 2 : 1}">
+      <source [src]="videoInfo.videoUri" type="video/mp4">
+    </video>
+    <div class="video-detail">
+      <span class="title">{{videoInfo.title}}</span>
+      <span class="description">{{videoInfo.description}}</span>
+      <div class="operations">
+        <div>
+            <i class="icon icon-icon_star"></i>
+            <span>点赞</span>
+        </div>
+        <div>
+            <i class="icon icon-icon_add_outline"></i>
+            <span>收藏</span>
+        </div>
+        <div>
+            <i class="icon icon-icon_tp_overview"></i>
+            <span>评论</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</vg-player>

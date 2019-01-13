@@ -25,7 +25,8 @@ import { ListByCategoryComponent } from './list-by-category/list-by-category.com
     CommonModule,
     HomeRoutingModule,
     SharedModule,
-    HttpClientModule
+    HttpClientModule,
+    
   ],
   providers: [
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy }

@@ -1,4 +1,5 @@
 import { Component, OnInit, Input, HostListener } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-video-item',
@@ -13,9 +14,10 @@ export class VideoItemComponent implements OnInit {
   @HostListener('click')
   onClick() {
     console.log(this.videoInfo);
+    this.router.navigateByUrl('videoplay/' + this.videoInfo.id);
   }
 
-  constructor() { }
+  constructor(private router: Router) { }
 
   ngOnInit() {
   }

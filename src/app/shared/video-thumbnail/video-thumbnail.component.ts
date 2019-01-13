@@ -1,4 +1,5 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, HostListener } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-video-thumbnail',
@@ -10,7 +11,17 @@ export class VideoThumbnailComponent implements OnInit {
   @Input()
   videoInfo: any;
 
-  constructor() { }
+  @Input()
+  titleColor = '#333333';
+  @Input()
+  descColor = '#666666';
+
+  @HostListener('click')
+  onClick() {
+    this.router.navigateByUrl('videoplay/' + this.videoInfo.id);
+  }
+
+  constructor(private router: Router) { }
 
   ngOnInit() {
   }

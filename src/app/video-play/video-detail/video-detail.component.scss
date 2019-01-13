@@ -1,4 +1,26 @@
 .video-play-container {
     background-color: #030303;
+    overflow-y: scroll;
+}
+
+// .video-play-container::-webkit-scrollbar {
+//     visibility: hidden;
+// }
+
+.recommend {
+    margin: 16px;
+}
+
+.recommend > span {
+    color: #ffffff;
+    font-size: 16px;
+}
+
+.recommend > div {
+    margin-top: 8px;
+}
+
+.video-container {
+    height: 100px;
 }
 

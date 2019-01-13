@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { VideoService } from '../video.service';
+import { VideoService } from '../../services/video.service';
 
 @Component({
   selector: 'app-list-by-category',

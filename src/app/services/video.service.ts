@@ -366,4 +366,50 @@ export class VideoService {
       },
     ]
   }
+
+  getVideoDetail(videoId: number) {
+    return {
+      "id": videoId,
+      "title" : "超然影视混剪：坚持不懈的完美",
+      "thumbnailUri" : "../../../assets/icon/page-1.png",
+      "videoUri": "http://static.videogular.com/assets/videos/videogular.mp4",
+      "category": "life",
+      "description" : "随着我们心跳的节奏，标志着我们生命的开始。随着旋律起舞，是我们内心的一种本能。而纷繁的世界里，有太多的声音在干扰。短片是德国 THE SAXONS 舞团关于舞蹈的一段精彩宣言。",
+    }
+  }
+
+  getRecommendsOf(category: string) {
+    return [
+      {
+        "id": 423,
+        "title" : "小雀斑&抖森配音定格动画「早期人类」",
+        "author" : "vv",
+        "thumbnailUri" : "../../../assets/icon/page-1.png",
+        "avatorUri": "../../../assets/icon/page-1.png",
+        "category": "life",
+        "description" : "随着我们心跳的节奏，标志着我们生命的开始。随着旋律起舞，是我们内心的一种本能。而纷繁的世界里，有太多的声音在干扰。短片是德国 THE SAXONS 舞团关于舞蹈的一段精彩宣言",
+        "publishTime" : "2019-01-01 08:08:08",
+      },
+      {
+        "id": 424,
+        "title" : "小雀斑&抖森配音定格动画「早期人类」",
+        "author" : "vv",
+        "thumbnailUri" : "../../../assets/icon/page-1.png",
+        "avatorUri": "../../../assets/icon/page-1.png",
+        "category": "life",
+        "description" : "随着我们心跳的节奏，标志着我们生命的开始。随着旋律起舞，是我们内心的一种本能。而纷繁的世界里，有太多的声音在干扰。短片是德国 THE SAXONS 舞团关于舞蹈的一段精彩宣言",
+        "publishTime" : "2019-01-01 08:08:08",
+      },
+      {
+        "id": 3421,
+        "title" : "小雀斑&抖森配音定格动画「早期人类」",
+        "author" : "vv",
+        "thumbnailUri" : "../../../assets/icon/page-1.png",
+        "avatorUri": "../../../assets/icon/page-1.png",
+        "category": "life",
+        "description" : "随着我们心跳的节奏，标志着我们生命的开始。随着旋律起舞，是我们内心的一种本能。而纷繁的世界里，有太多的声音在干扰。短片是德国 THE SAXONS 舞团关于舞蹈的一段精彩宣言",
+        "publishTime" : "2019-01-01 08:08:08",
+      },
+    ]
+  }
 }

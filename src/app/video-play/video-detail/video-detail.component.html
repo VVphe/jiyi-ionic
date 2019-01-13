@@ -1,3 +1,12 @@
-<!-- <div class="video-play-container">
-
-</div> -->
+<vg-player>
+  <div class="video-play-container">
+    <app-video-play-item [videoInfo]="videoInfo"></app-video-play-item>
+    
+    <div class="recommend">
+      <span>相关推荐</span>
+      <div *ngFor="let video of recommendVideoList">
+        <app-video-thumbnail [videoInfo]="video" [titleColor]="'#ffffff'" [descColor]="'rgba(255,255,255,0.80)'"></app-video-thumbnail>
+      </div>
+    </div>
+  </div>
+</vg-player>

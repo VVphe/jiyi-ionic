@@ -17,12 +17,15 @@
     justify-content: space-between;
 }
 
-.video-thumbnail-container .video-desc > span:first-child {
+.video-thumbnail-container .video-desc > .title {
     font-size: 14px;
-    color: #333333;
+    // color: #333333;
 }
 
-.video-thumbnail-container .video-desc > span:last-child {
+.video-thumbnail-container .video-desc > .description {
+    max-height: 16px;
     font-size: 12px;
-    color: #666666;
+    // color: #666666;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }

@@ -4,7 +4,7 @@ import { CommonModule } from '@angular/common';
 import { VideoDetailComponent } from './video-detail/video-detail.component';
 
 const routes: Routes = [
-    { path: '', component: VideoDetailComponent }
+    { path: ':videoId', component: VideoDetailComponent }
 ];
 
 @NgModule({
