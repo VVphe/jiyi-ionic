@@ -30,4 +30,8 @@ export class VideoPlayItemComponent implements OnInit {
     this.api = api;
   }
 
+  showCommends() {
+    
+  }
+
 }
