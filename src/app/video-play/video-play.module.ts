@@ -5,11 +5,13 @@ import { VideoDetailComponent } from './video-detail/video-detail.component';
 import { VideoPlayItemComponent } from './video-play-item/video-play-item.component';
 import { HttpClientModule } from '@angular/common/http';
 import { SharedModule } from '../shared/shared.module';
+import { CommentItemComponent } from './comment-item/comment-item.component';
 
 @NgModule({
   declarations: [
     VideoDetailComponent,
-    VideoPlayItemComponent
+    VideoPlayItemComponent,
+    CommentItemComponent
   ],
   imports: [
     CommonModule,

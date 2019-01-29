@@ -375,6 +375,7 @@ export class VideoService {
       "videoUri": "http://static.videogular.com/assets/videos/videogular.mp4",
       "category": "life",
       "description" : "随着我们心跳的节奏，标志着我们生命的开始。随着旋律起舞，是我们内心的一种本能。而纷繁的世界里，有太多的声音在干扰。短片是德国 THE SAXONS 舞团关于舞蹈的一段精彩宣言。",
+      "commentsCount": 3130
     }
   }
 

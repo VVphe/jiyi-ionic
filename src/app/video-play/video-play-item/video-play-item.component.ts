@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { VgAPI } from 'videogular2/core';
 
 @Component({
@@ -10,6 +10,9 @@ export class VideoPlayItemComponent implements OnInit {
 
   @Input()
   videoInfo: any;
+
+  @Output()
+  showComments = new EventEmitter();
 
   isPlaying = false;
   api: VgAPI;
@@ -30,8 +33,8 @@ export class VideoPlayItemComponent implements OnInit {
     this.api = api;
   }
 
-  showCommends() {
-    
+  showCommentsClick() {
+    this.showComments.emit();
   }
 
 }

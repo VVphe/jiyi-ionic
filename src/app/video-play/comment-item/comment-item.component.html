@@ -1,0 +1,28 @@
+<div>
+  <div class="comment">
+    <img [src]="commentInfo.avator">
+    <div *ngIf="commentInfo.type == 'comment'">
+      <span class="username">{{commentInfo.username}}</span>
+      <span class="content">{{commentInfo.content}}</span>
+      <div>
+        <span class="date">{{commentInfo.date}}</span>
+        <span>· 回复</span>
+      </div>
+    </div>
+    <div *ngIf="commentInfo.type == 'reply'" style="width: 100%">
+        <span class="username">{{commentInfo.username}} 回复 {{commentInfo.commentUsername}}</span>
+        <span class="content">{{commentInfo.content}}</span>
+        <div class="reply-info">
+          <img [src]="commentInfo.commentAvator">
+          <div>
+            <span>{{commentInfo.commentUsername}}</span>
+            <span>{{commentInfo.commentContent}}</span>
+          </div>
+        </div>
+        <div>
+          <span class="date">{{commentInfo.date}}</span>
+          <span>· 回复</span>
+        </div>
+    </div>
+  </div>
+</div>
