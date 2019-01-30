@@ -1,229 +1,29 @@
 import { Injectable, Inject } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpParams } from '@angular/common/http';
+import * as moment from "moment";
 
 @Injectable({
   providedIn: 'root'
 })
 export class VideoService {
 
-  constructor(http: HttpClient, @Inject('nodeUrl') nodeUrl) { }
+  constructor(private http: HttpClient, @Inject('nodeUrl') private nodeUrl) { }
 
   getEverydayVideo() {
-    return {
-      "id": "2356",
-      "title" : "test",
-      "subTitle" : "副标题",
-      "author" : "vv",
-      "thumbnailUri" : "../../../assets/icon/page-1.png",
-      "avatorUri": "../../../assets/icon/page-1.png",
-      "description" : "test",
-      "publishTime" : "2019-01-01 08:08:08",
-    }
+    const params = new HttpParams()
+      .set('publishTime', moment().format('YYYY-MM-DD'));
+
+    return this.http.get(this.nodeUrl + '/recommend/everydayPick', { params });
   }
 
   getCategoryVideos() {
-    //TODO:
-    return [
-      {
-        category: 'music',
-        videos: [
-          {
-            "id": 1,
-            "title" : "test",
-            "subTitle" : "副标题",
-            "author" : "vv",
-            "thumbnailUri" : "../../../assets/icon/page-1.png",
-            "avatorUri": "../../../assets/icon/page-1.png",
-            "description" : "test",
-            "publishTime" : "2019-01-01 08:08:08",
-          },
-          {
-            "id": 2,
-            "title" : "test",
-            "subTitle" : "副标题",
-            "author" : "vv",
-            "thumbnailUri" : "../../../assets/icon/page-1.png",
-            "avatorUri": "../../../assets/icon/page-1.png",
-            "description" : "test",
-            "publishTime" : "2019-01-01 08:08:08",
-          },
-          {
-            "id": 3,
-            "title" : "test",
-            "subTitle" : "副标题",
-            "author" : "vv",
-            "thumbnailUri" : "../../../assets/icon/page-1.png",
-            "avatorUri": "../../../assets/icon/page-1.png",
-            "description" : "test",
-            "publishTime" : "2019-01-01 08:08:08",
-          }
-        ]
-      },
-      {
-        category: 'sport',
-        videos: [
-          {
-            "id": 4,
-            "title" : "test",
-            "subTitle" : "副标题",
-            "author" : "vv",
-            "thumbnailUri" : "../../../assets/icon/page-1.png",
-            "avatorUri": "../../../assets/icon/page-1.png",
-            "description" : "test",
-            "publishTime" : "2019-01-01 08:08:08",
-          },
-          {
-            "id": 5,
-            "title" : "test",
-            "subTitle" : "副标题",
-            "author" : "vv",
-            "thumbnailUri" : "../../../assets/icon/page-1.png",
-            "avatorUri": "../../../assets/icon/page-1.png",
-            "description" : "test",
-            "publishTime" : "2019-01-01 08:08:08",
-          },
-        ]
-      },
-      {
-        category: 'campus',
-        videos: [
-          {
-            "id": 6,
-            "title" : "test",
-            "subTitle" : "副标题",
-            "author" : "vv",
-            "thumbnailUri" : "../../../assets/icon/page-1.png",
-            "avatorUri": "../../../assets/icon/page-1.png",
-            "description" : "test",
-            "publishTime" : "2019-01-01 08:08:08",
-          },
-          {
-            "id": 7,
-            "title" : "test",
-            "author" : "vv",
-            "thumbnailUri" : "../../../assets/icon/page-1.png",
-            "avatorUri": "../../../assets/icon/page-1.png",
-            "description" : "test",
-            "publishTime" : "2019-01-01 08:08:08",
-          },
-          {
-            "id": 8,
-            "title" : "test",
-            "subTitle" : "副标题",
-            "author" : "vv",
-            "thumbnailUri" : "../../../assets/icon/page-1.png",
-            "avatorUri": "../../../assets/icon/page-1.png",
-            "description" : "test",
-            "publishTime" : "2019-01-01 08:08:08",
-          },
-        ]
-      }
-    ]
+    const params = new HttpParams()
+      .set('publishTime', moment().format("YYYY-MM-DD"));
+    return this.http.get(this.nodeUrl + '/recommend', { params });
   }
 
   getRankingVideos() {
-    return [
-      {
-        "id": 1,
-        "title" : "test",
-        "subTitle" : "副标题",
-        "author" : "vv",
-        "thumbnailUri" : "../../../assets/icon/page-1.png",
-        "avatorUri": "../../../assets/icon/page-1.png",
-        "description" : "test",
-        "publishTime" : "2019-01-01 08:08:08",
-      },
-      {
-        "id": 2,
-        "title" : "test",
-        "subTitle" : "副标题",
-        "author" : "vv",
-        "thumbnailUri" : "../../../assets/icon/page-1.png",
-        "avatorUri": "../../../assets/icon/page-1.png",
-        "description" : "test",
-        "publishTime" : "2019-01-01 08:08:08",
-      },
-      {
-        "id": 3,
-        "title" : "test",
-        "subTitle" : "副标题",
-        "author" : "vv",
-        "thumbnailUri" : "../../../assets/icon/page-1.png",
-        "avatorUri": "../../../assets/icon/page-1.png",
-        "description" : "test",
-        "publishTime" : "2019-01-01 08:08:08",
-      },
-      {
-        "id": 4,
-        "title" : "test",
-        "subTitle" : "副标题",
-        "author" : "vv",
-        "thumbnailUri" : "../../../assets/icon/page-1.png",
-        "avatorUri": "../../../assets/icon/page-1.png",
-        "description" : "test",
-        "publishTime" : "2019-01-01 08:08:08",
-      },
-      {
-        "id": 5,
-        "title" : "test",
-        "subTitle" : "副标题",
-        "author" : "vv",
-        "thumbnailUri" : "../../../assets/icon/page-1.png",
-        "avatorUri": "../../../assets/icon/page-1.png",
-        "description" : "test",
-        "publishTime" : "2019-01-01 08:08:08",
-      },
-      {
-        "id": 6,
-        "title" : "test",
-        "subTitle" : "副标题",
-        "author" : "vv",
-        "thumbnailUri" : "../../../assets/icon/page-1.png",
-        "avatorUri": "../../../assets/icon/page-1.png",
-        "description" : "test",
-        "publishTime" : "2019-01-01 08:08:08",
-      },
-      {
-        "id": 7,
-        "title" : "test",
-        "subTitle" : "副标题",
-        "author" : "vv",
-        "thumbnailUri" : "../../../assets/icon/page-1.png",
-        "avatorUri": "../../../assets/icon/page-1.png",
-        "description" : "test",
-        "publishTime" : "2019-01-01 08:08:08",
-      },
-      {
-        "id": 8,
-        "title" : "test",
-        "subTitle" : "副标题",
-        "author" : "vv",
-        "thumbnailUri" : "../../../assets/icon/page-1.png",
-        "avatorUri": "../../../assets/icon/page-1.png",
-        "description" : "test",
-        "publishTime" : "2019-01-01 08:08:08",
-      },
-      {
-        "id": 9,
-        "title" : "test",
-        "subTitle" : "副标题",
-        "author" : "vv",
-        "thumbnailUri" : "../../../assets/icon/page-1.png",
-        "avatorUri": "../../../assets/icon/page-1.png",
-        "description" : "test",
-        "publishTime" : "2019-01-01 08:08:08",
-      },
-      {
-        "id": 10,
-        "title" : "test",
-        "subTitle" : "副标题",
-        "author" : "vv",
-        "thumbnailUri" : "../../../assets/icon/page-1.png",
-        "avatorUri": "../../../assets/icon/page-1.png",
-        "description" : "test",
-        "publishTime" : "2019-01-01 08:08:08",
-      }
-    ]
+    return this.http.get(this.nodeUrl + '/recommend/rank');
   }
 
   getLatestPopularVideos(category: string) {

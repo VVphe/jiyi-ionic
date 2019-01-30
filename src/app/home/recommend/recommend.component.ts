@@ -15,8 +15,12 @@ export class RecommendComponent implements OnInit {
   constructor(private videoService: VideoService) { }
 
   ngOnInit() {
-    this.everydayPickVideo = this.videoService.getEverydayVideo();
-    this.videoList = this.videoService.getCategoryVideos();
+    this.videoService.getEverydayVideo().subscribe(everydayPickVideo => {
+      this.everydayPickVideo = everydayPickVideo;
+    });
+    this.videoService.getCategoryVideos().subscribe(videoList => {
+      this.videoList = videoList;
+    });
   }
 
 }

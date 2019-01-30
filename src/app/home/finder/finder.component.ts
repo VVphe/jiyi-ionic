@@ -17,21 +17,6 @@ export class FinderComponent implements OnInit {
   ngOnInit() {
     this.categoryList = [
       {
-        name: '关注',
-        tabType: 'concern',
-        img: '../../../assets/icon/page-1.png'
-      }, 
-      {
-        name: '发现',
-        tabType: 'finder',
-        img: '../../../assets/icon/page-1.png'
-      }, 
-      {
-        name: '推荐',
-        tabType: 'recommend',
-        img: '../../../assets/icon/page-1.png'
-      }, 
-      {
         name: '校园',
         tabType: 'campus',
         img: '../../../assets/icon/page-1.png'
@@ -57,7 +42,9 @@ export class FinderComponent implements OnInit {
         img: '../../../assets/icon/page-1.png'
       },
     ]
-    this.rankingVideos = this.videoServide.getRankingVideos();
+    this.videoServide.getRankingVideos().subscribe(rankingVideos => {
+      this.rankingVideos = rankingVideos;
+    });
   }
 
 }
