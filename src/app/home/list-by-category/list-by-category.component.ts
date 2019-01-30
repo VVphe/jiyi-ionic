@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { VideoService } from '../../services/video.service';
 
+
 @Component({
   selector: 'app-list-by-category',
   templateUrl: './list-by-category.component.html',
@@ -18,9 +19,16 @@ export class ListByCategoryComponent implements OnInit {
 
   ngOnInit() {
     let category = this.routerInfo.snapshot.params['category'];
-    this.latestPopularVideos = this.videoService.getLatestPopularVideos(category);
-    this.popularVideos = this.videoService.getPopularVideos(category);
-    this.latestVideos = this.videoService.getLatestVideos(category);
+    this.videoService.getLatestPopularVideos(category).subscribe(videos => {
+      this.latestPopularVideos = videos;
+    });
+    this.videoService.getPopularVideos(category).subscribe(videos => {
+      this.popularVideos = videos;
+    });
+    
+    this.videoService.getLatestVideos(category).subscribe(videos => {
+      this.latestVideos = videos;
+    });
   }
 
 }

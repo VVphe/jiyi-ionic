@@ -1,15 +1,15 @@
 <div class="category-list-container">
-  <span class="category-header">最新热门</span>
-  <div style="border-bottom: 1px solid rgba(0, 0, 0, 0.1); margin-bottom: 24px;">
+  <span class="category-header" *ngIf="latestPopularVideos && latestPopularVideos.length > 0">最新热门</span>
+  <div style="border-bottom: 1px solid rgba(0, 0, 0, 0.1); margin-bottom: 24px;" *ngIf="latestPopularVideos && latestPopularVideos.length > 0">
     <app-video-list [videoList]="latestPopularVideos"></app-video-list>
   </div>
 
-  <span class="category-header">最受欢迎</span>
-  <div style="border-bottom: 1px solid rgba(0, 0, 0, 0.1); margin-bottom: 24px;">
+  <span class="category-header" *ngIf="popularVideos && popularVideos.length > 0">最受欢迎</span>
+  <div style="border-bottom: 1px solid rgba(0, 0, 0, 0.1); margin-bottom: 24px;" *ngIf="popularVideos && popularVideos.length > 0">
     <app-video-list [videoList]="popularVideos"></app-video-list>
   </div>
 
-  <span class="category-header">最近更新</span>
+  <span class="category-header" *ngIf="latestVideos && latestVideos.length > 0">最近更新</span>
   <div *ngFor="let video of latestVideos">
     <app-video-item [videoInfo]="video"></app-video-item>
   </div>

@@ -18,7 +18,11 @@ export class VideoThumbnailComponent implements OnInit {
 
   @HostListener('click')
   onClick() {
-    this.router.navigateByUrl('videoplay/' + this.videoInfo.id);
+    this.router.navigateByUrl(
+      this.router.createUrlTree(
+        ['videoplay/' + this.videoInfo.id], {queryParams: this.videoInfo}
+      )
+    );
   }
 
   constructor(private router: Router) { }

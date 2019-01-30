@@ -14,7 +14,11 @@ export class VideoItemComponent implements OnInit {
   @HostListener('click')
   onClick() {
     console.log(this.videoInfo);
-    this.router.navigateByUrl('videoplay/' + this.videoInfo.id);
+    this.router.navigateByUrl(
+      this.router.createUrlTree(
+        ['videoplay/' + this.videoInfo.id], {queryParams: this.videoInfo}
+      )
+    );
   }
 
   constructor(private router: Router) { }

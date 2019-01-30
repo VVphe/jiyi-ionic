@@ -26,10 +26,17 @@ export class VideoDetailComponent implements OnInit {
 
   ngOnInit() {
     //TODO:
-    this.videoInfo = this.videoService.getVideoDetail(3);
+    // this.videoInfo = this.videoService.getVideoDetail(3);
+    // this.videoInfo = this.activatedRoute.snapshot.params;
+    console.log(this.activatedRoute);
+    this.activatedRoute.queryParams.subscribe(params => {
+      this.videoInfo = params;
+      console.log(this.videoInfo);
+    })
+    
     this.recommendVideoList = this.videoService.getRecommendsOf('life');
 
-    console.log(this.activatedRoute.snapshot.params['videoId']);
+    // console.log(this.activatedRoute.snapshot.params['videoId']);
   }
 
   showCommentsHandler() {
