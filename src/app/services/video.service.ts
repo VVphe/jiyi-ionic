@@ -12,6 +12,7 @@ export class VideoService {
     return {
       "id": "2356",
       "title" : "test",
+      "subTitle" : "副标题",
       "author" : "vv",
       "thumbnailUri" : "../../../assets/icon/page-1.png",
       "avatorUri": "../../../assets/icon/page-1.png",
@@ -29,6 +30,7 @@ export class VideoService {
           {
             "id": 1,
             "title" : "test",
+            "subTitle" : "副标题",
             "author" : "vv",
             "thumbnailUri" : "../../../assets/icon/page-1.png",
             "avatorUri": "../../../assets/icon/page-1.png",
@@ -38,6 +40,7 @@ export class VideoService {
           {
             "id": 2,
             "title" : "test",
+            "subTitle" : "副标题",
             "author" : "vv",
             "thumbnailUri" : "../../../assets/icon/page-1.png",
             "avatorUri": "../../../assets/icon/page-1.png",
@@ -47,6 +50,7 @@ export class VideoService {
           {
             "id": 3,
             "title" : "test",
+            "subTitle" : "副标题",
             "author" : "vv",
             "thumbnailUri" : "../../../assets/icon/page-1.png",
             "avatorUri": "../../../assets/icon/page-1.png",
@@ -61,6 +65,7 @@ export class VideoService {
           {
             "id": 4,
             "title" : "test",
+            "subTitle" : "副标题",
             "author" : "vv",
             "thumbnailUri" : "../../../assets/icon/page-1.png",
             "avatorUri": "../../../assets/icon/page-1.png",
@@ -70,6 +75,7 @@ export class VideoService {
           {
             "id": 5,
             "title" : "test",
+            "subTitle" : "副标题",
             "author" : "vv",
             "thumbnailUri" : "../../../assets/icon/page-1.png",
             "avatorUri": "../../../assets/icon/page-1.png",
@@ -84,6 +90,7 @@ export class VideoService {
           {
             "id": 6,
             "title" : "test",
+            "subTitle" : "副标题",
             "author" : "vv",
             "thumbnailUri" : "../../../assets/icon/page-1.png",
             "avatorUri": "../../../assets/icon/page-1.png",
@@ -102,6 +109,7 @@ export class VideoService {
           {
             "id": 8,
             "title" : "test",
+            "subTitle" : "副标题",
             "author" : "vv",
             "thumbnailUri" : "../../../assets/icon/page-1.png",
             "avatorUri": "../../../assets/icon/page-1.png",
@@ -118,6 +126,7 @@ export class VideoService {
       {
         "id": 1,
         "title" : "test",
+        "subTitle" : "副标题",
         "author" : "vv",
         "thumbnailUri" : "../../../assets/icon/page-1.png",
         "avatorUri": "../../../assets/icon/page-1.png",
@@ -127,6 +136,7 @@ export class VideoService {
       {
         "id": 2,
         "title" : "test",
+        "subTitle" : "副标题",
         "author" : "vv",
         "thumbnailUri" : "../../../assets/icon/page-1.png",
         "avatorUri": "../../../assets/icon/page-1.png",
@@ -136,6 +146,7 @@ export class VideoService {
       {
         "id": 3,
         "title" : "test",
+        "subTitle" : "副标题",
         "author" : "vv",
         "thumbnailUri" : "../../../assets/icon/page-1.png",
         "avatorUri": "../../../assets/icon/page-1.png",
@@ -145,6 +156,7 @@ export class VideoService {
       {
         "id": 4,
         "title" : "test",
+        "subTitle" : "副标题",
         "author" : "vv",
         "thumbnailUri" : "../../../assets/icon/page-1.png",
         "avatorUri": "../../../assets/icon/page-1.png",
@@ -154,6 +166,7 @@ export class VideoService {
       {
         "id": 5,
         "title" : "test",
+        "subTitle" : "副标题",
         "author" : "vv",
         "thumbnailUri" : "../../../assets/icon/page-1.png",
         "avatorUri": "../../../assets/icon/page-1.png",
@@ -163,6 +176,7 @@ export class VideoService {
       {
         "id": 6,
         "title" : "test",
+        "subTitle" : "副标题",
         "author" : "vv",
         "thumbnailUri" : "../../../assets/icon/page-1.png",
         "avatorUri": "../../../assets/icon/page-1.png",
@@ -172,6 +186,7 @@ export class VideoService {
       {
         "id": 7,
         "title" : "test",
+        "subTitle" : "副标题",
         "author" : "vv",
         "thumbnailUri" : "../../../assets/icon/page-1.png",
         "avatorUri": "../../../assets/icon/page-1.png",
@@ -181,6 +196,7 @@ export class VideoService {
       {
         "id": 8,
         "title" : "test",
+        "subTitle" : "副标题",
         "author" : "vv",
         "thumbnailUri" : "../../../assets/icon/page-1.png",
         "avatorUri": "../../../assets/icon/page-1.png",
@@ -190,6 +206,7 @@ export class VideoService {
       {
         "id": 9,
         "title" : "test",
+        "subTitle" : "副标题",
         "author" : "vv",
         "thumbnailUri" : "../../../assets/icon/page-1.png",
         "avatorUri": "../../../assets/icon/page-1.png",
@@ -199,6 +216,7 @@ export class VideoService {
       {
         "id": 10,
         "title" : "test",
+        "subTitle" : "副标题",
         "author" : "vv",
         "thumbnailUri" : "../../../assets/icon/page-1.png",
         "avatorUri": "../../../assets/icon/page-1.png",
@@ -213,6 +231,7 @@ export class VideoService {
       {
         "id": 6,
         "title" : "test",
+        "subTitle" : "副标题",
         "author" : "vv",
         "thumbnailUri" : "../../../assets/icon/page-1.png",
         "avatorUri": "../../../assets/icon/page-1.png",
@@ -222,6 +241,7 @@ export class VideoService {
       {
         "id": 7,
         "title" : "test",
+        "subTitle" : "副标题",
         "author" : "vv",
         "thumbnailUri" : "../../../assets/icon/page-1.png",
         "avatorUri": "../../../assets/icon/page-1.png",
@@ -231,6 +251,7 @@ export class VideoService {
       {
         "id": 8,
         "title" : "test",
+        "subTitle" : "副标题",
         "author" : "vv",
         "thumbnailUri" : "../../../assets/icon/page-1.png",
         "avatorUri": "../../../assets/icon/page-1.png",
@@ -245,6 +266,7 @@ export class VideoService {
       {
         "id": 6,
         "title" : "test",
+        "subTitle" : "副标题",
         "author" : "vv",
         "thumbnailUri" : "../../../assets/icon/page-1.png",
         "avatorUri": "../../../assets/icon/page-1.png",
@@ -254,6 +276,7 @@ export class VideoService {
       {
         "id": 7,
         "title" : "test",
+        "subTitle" : "副标题",
         "author" : "vv",
         "thumbnailUri" : "../../../assets/icon/page-1.png",
         "avatorUri": "../../../assets/icon/page-1.png",
@@ -263,6 +286,7 @@ export class VideoService {
       {
         "id": 8,
         "title" : "test",
+        "subTitle" : "副标题",
         "author" : "vv",
         "thumbnailUri" : "../../../assets/icon/page-1.png",
         "avatorUri": "../../../assets/icon/page-1.png",
@@ -277,6 +301,7 @@ export class VideoService {
       {
         "id": 1,
         "title" : "test",
+        "subTitle" : "副标题",
         "author" : "vv",
         "thumbnailUri" : "../../../assets/icon/page-1.png",
         "avatorUri": "../../../assets/icon/page-1.png",
@@ -286,6 +311,7 @@ export class VideoService {
       {
         "id": 2,
         "title" : "test",
+        "subTitle" : "副标题",
         "author" : "vv",
         "thumbnailUri" : "../../../assets/icon/page-1.png",
         "avatorUri": "../../../assets/icon/page-1.png",
@@ -295,6 +321,7 @@ export class VideoService {
       {
         "id": 3,
         "title" : "test",
+        "subTitle" : "副标题",
         "author" : "vv",
         "thumbnailUri" : "../../../assets/icon/page-1.png",
         "avatorUri": "../../../assets/icon/page-1.png",
@@ -304,6 +331,7 @@ export class VideoService {
       {
         "id": 4,
         "title" : "test",
+        "subTitle" : "副标题",
         "author" : "vv",
         "thumbnailUri" : "../../../assets/icon/page-1.png",
         "avatorUri": "../../../assets/icon/page-1.png",
@@ -313,6 +341,7 @@ export class VideoService {
       {
         "id": 5,
         "title" : "test",
+        "subTitle" : "副标题",
         "author" : "vv",
         "thumbnailUri" : "../../../assets/icon/page-1.png",
         "avatorUri": "../../../assets/icon/page-1.png",
@@ -322,6 +351,7 @@ export class VideoService {
       {
         "id": 6,
         "title" : "test",
+        "subTitle" : "副标题",
         "author" : "vv",
         "thumbnailUri" : "../../../assets/icon/page-1.png",
         "avatorUri": "../../../assets/icon/page-1.png",
@@ -331,6 +361,7 @@ export class VideoService {
       {
         "id": 7,
         "title" : "test",
+        "subTitle" : "副标题",
         "author" : "vv",
         "thumbnailUri" : "../../../assets/icon/page-1.png",
         "avatorUri": "../../../assets/icon/page-1.png",
@@ -340,6 +371,7 @@ export class VideoService {
       {
         "id": 8,
         "title" : "test",
+        "subTitle" : "副标题",
         "author" : "vv",
         "thumbnailUri" : "../../../assets/icon/page-1.png",
         "avatorUri": "../../../assets/icon/page-1.png",
@@ -349,6 +381,7 @@ export class VideoService {
       {
         "id": 9,
         "title" : "test",
+        "subTitle" : "副标题",
         "author" : "vv",
         "thumbnailUri" : "../../../assets/icon/page-1.png",
         "avatorUri": "../../../assets/icon/page-1.png",
@@ -358,6 +391,7 @@ export class VideoService {
       {
         "id": 10,
         "title" : "test",
+        "subTitle" : "副标题",
         "author" : "vv",
         "thumbnailUri" : "../../../assets/icon/page-1.png",
         "avatorUri": "../../../assets/icon/page-1.png",
@@ -371,6 +405,7 @@ export class VideoService {
     return {
       "id": videoId,
       "title" : "超然影视混剪：坚持不懈的完美",
+      "subTitle" : "副标题",
       "thumbnailUri" : "../../../assets/icon/page-1.png",
       "videoUri": "http://static.videogular.com/assets/videos/videogular.mp4",
       "category": "life",
@@ -384,6 +419,7 @@ export class VideoService {
       {
         "id": 423,
         "title" : "小雀斑&抖森配音定格动画「早期人类」",
+        "subTitle" : "副标题",
         "author" : "vv",
         "thumbnailUri" : "../../../assets/icon/page-1.png",
         "avatorUri": "../../../assets/icon/page-1.png",
@@ -394,6 +430,7 @@ export class VideoService {
       {
         "id": 424,
         "title" : "小雀斑&抖森配音定格动画「早期人类」",
+        "subTitle" : "副标题",
         "author" : "vv",
         "thumbnailUri" : "../../../assets/icon/page-1.png",
         "avatorUri": "../../../assets/icon/page-1.png",
@@ -404,6 +441,7 @@ export class VideoService {
       {
         "id": 3421,
         "title" : "小雀斑&抖森配音定格动画「早期人类」",
+        "subTitle" : "副标题",
         "author" : "vv",
         "thumbnailUri" : "../../../assets/icon/page-1.png",
         "avatorUri": "../../../assets/icon/page-1.png",
