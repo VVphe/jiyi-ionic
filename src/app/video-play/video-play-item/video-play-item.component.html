@@ -19,11 +19,11 @@
       <span class="title">{{videoInfo.title}}</span>
       <span class="description">{{videoInfo.description}}</span>
       <div class="operations">
-        <div>
+        <div (click)="starClick()">
             <i class="icon icon-icon_star"></i>
             <span>点赞</span>
         </div>
-        <div>
+        <div (click)="likeClick()">
             <i class="icon icon-icon_add_outline"></i>
             <span>收藏</span>
         </div>

@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-comment-item',
@@ -10,9 +10,16 @@ export class CommentItemComponent implements OnInit {
   @Input()
   commentInfo: any;
 
+  @Output()
+  reply = new EventEmitter();
+
   constructor() { }
 
   ngOnInit() {
+  }
+
+  replyClick() {
+    this.reply.emit();
   }
 
 }

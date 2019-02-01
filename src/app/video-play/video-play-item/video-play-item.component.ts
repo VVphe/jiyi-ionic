@@ -14,6 +14,12 @@ export class VideoPlayItemComponent implements OnInit {
   @Output()
   showComments = new EventEmitter();
 
+  @Output()
+  like = new EventEmitter();
+
+  @Output()
+  star = new EventEmitter();
+
   isPlaying = false;
   api: VgAPI;
 
@@ -35,6 +41,14 @@ export class VideoPlayItemComponent implements OnInit {
 
   showCommentsClick() {
     this.showComments.emit();
+  }
+
+  likeClick() {
+    this.like.emit();
+  }
+
+  starClick() {
+    this.star.emit();
   }
 
 }

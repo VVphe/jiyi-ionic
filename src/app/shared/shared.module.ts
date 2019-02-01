@@ -1,5 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { FormsModule } from '@angular/forms';
+
 import { VideoListComponent } from './video-list/video-list.component';
 import { EveryPickComponent } from './every-pick/every-pick.component';
 import { VideoItemComponent } from './video-item/video-item.component';
@@ -24,7 +26,8 @@ import {VgBufferingModule} from 'videogular2/buffering';
     VgCoreModule,
     VgControlsModule,
     VgOverlayPlayModule,
-    VgBufferingModule
+    VgBufferingModule,
+    FormsModule
   ],
   exports: [
     VideoListComponent,
@@ -36,7 +39,9 @@ import {VgBufferingModule} from 'videogular2/buffering';
     VgCoreModule,
     VgControlsModule,
     VgOverlayPlayModule,
-    VgBufferingModule
+    VgBufferingModule,
+
+    FormsModule
   ]
 })
 export class SharedModule { }

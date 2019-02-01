@@ -6,7 +6,7 @@
       <span class="content">{{commentInfo.content}}</span>
       <div>
         <span class="date">{{commentInfo.date}}</span>
-        <span>· 回复</span>
+        <span (click)="replyClick()">· 回复</span>
       </div>
     </div>
     <div *ngIf="commentInfo.type == 'reply'" style="width: 100%">
@@ -21,7 +21,7 @@
         </div>
         <div>
           <span class="date">{{commentInfo.date}}</span>
-          <span>· 回复</span>
+          <span (click)="replyClick()">· 回复</span>
         </div>
     </div>
   </div>

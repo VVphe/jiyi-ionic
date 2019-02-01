@@ -1,6 +1,10 @@
 <vg-player>
   <div class="video-play-container">
-    <app-video-play-item [videoInfo]="videoInfo" (showComments)="showCommentsHandler()"></app-video-play-item>
+    <app-video-play-item
+      [videoInfo]="videoInfo" 
+      (showComments)="showCommentsHandler()"
+      (like)="likeHandler(videoInfo)"
+      (star)="starHandler(videoInfo)"></app-video-play-item>
     
     <div class="recommend">
       <span>相关推荐</span>
@@ -10,8 +14,14 @@
     </div>
   </div>
 
-  <div class="recommends-list" [@commentAnim]="animState" (click)="onClick()">
-    <div class="count">{{videoInfo.commentsCount}}条评论</div>
-    <app-comment-item *ngFor="let commentInfo of comments" [commentInfo]="commentInfo"></app-comment-item>
+  <div class="recommends-list" [@commentAnim]="animState">
+    <div class="count">{{commentCount}}条评论</div>
+    <app-comment-item *ngFor="let commentInfo of comments" [commentInfo]="commentInfo" (reply)="replyHandler(commentInfo)"></app-comment-item>
+  </div>
+  <div class="input" *ngIf="animState == 'show' && currentInputType == 'comment'">
+    <input type="text" placeholder="请输入你的评论" (keyup)="publishComment($event)" [(ngModel)]="myComment">
+  </div>
+  <div class="input" [hidden]="animState != 'show' || currentInputType != 'reply'">
+    <input type="text" placeholder="请输入你的回复" (keyup)="publishReply($event)" [(ngModel)]="myReply" #replyInput>
   </div>
 </vg-player>
