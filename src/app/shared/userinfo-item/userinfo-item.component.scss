@@ -1,0 +1,43 @@
+.userinfo-container {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.userinfo-container img {
+    flex: 0;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    margin-right: 8px;
+}
+
+.userinfo-container .user-description {
+    flex: 1;
+    margin-right: 8px;
+}
+
+.userinfo-container .user-description div:first-child {
+    display: inline-block;
+    font-size: 14px;
+    color: #FFFFFF;
+}
+.userinfo-container .user-description div:last-child {
+    font-size: 12px;
+    color: #FFFFFF;
+}
+
+.userinfo-container button {
+    width: 60px;
+    height: 28px;
+    font-size: 14px;
+    color: #FFFFFF;
+    background: linear-gradient(to right, #FFEC86, #E6A102);
+    border-radius: 14px;
+    outline: none;
+}
+
+.cancel-concern {
+    width: 80px !important;
+}

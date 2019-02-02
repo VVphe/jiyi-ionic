@@ -1,0 +1,14 @@
+<div>
+  <div class="concern-list-container">
+    <div class="avator-list">
+      <img [src]="concern[0].avator" *ngFor="let concern of concernList">
+    </div>
+    
+    <button>全部</button>
+  </div>
+  <div class="concern-video-container">
+    <div *ngFor="let video of concernVideos">
+      <app-video-item-with-desc [videoInfo]="video"></app-video-item-with-desc>
+    </div>
+  </div>
+</div>

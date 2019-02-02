@@ -1,0 +1,30 @@
+.concern-list-container {
+    display: flex;
+    flex-direction: row;
+    padding-bottom: 8px;
+    border-bottom: 1px solid rgba(0,0,0,0.10);
+}
+
+.concern-list-container img {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    margin-right: 12px;
+}
+
+.concern-list-container button {
+    background: #FFFFFF;
+    color: #FFA600;
+    font-size: 14px;
+}
+
+.avator-list {
+    overflow-x: hidden;
+    flex: 1;
+}
+
+.concern-video-container > div {
+    border-bottom: 1px solid rgba(0,0,0,0.10);
+    margin-top: 16px;
+    padding-bottom: 8px;
+}

@@ -5,13 +5,14 @@ import { commentAnim } from "../../animates/recommend.animate";
 import { CommentsService } from 'src/app/services/comments.service';
 import { Storage } from "@ionic/storage";
 import { ViewChild, ElementRef } from "@angular/core";
+import { UserService } from 'src/app/services/user.service';
 
 @Component({
   selector: 'app-video-detail',
   templateUrl: './video-detail.component.html',
   styleUrls: ['./video-detail.component.scss'],
   animations: [commentAnim],
-  providers: [VideoService, CommentsService]
+  providers: [VideoService, CommentsService, UserService]
 })
 export class VideoDetailComponent implements OnInit {
 
@@ -31,8 +32,14 @@ export class VideoDetailComponent implements OnInit {
   @ViewChild('replyInput')
   replyInput: ElementRef;
 
+  userInfo: any;
+  concerned: boolean;
+
+  currentUserId;
+
   constructor(
     private videoService: VideoService, 
+    private userService: UserService,
     private activatedRoute: ActivatedRoute,
     private commentsService: CommentsService,
     private storage: Storage
@@ -47,6 +54,16 @@ export class VideoDetailComponent implements OnInit {
           return video.id != this.videoInfo.id;
         });
         this.recommendVideoList = videos;
+      })
+      this.userService.getUserInfoOf(this.videoInfo.authorId).subscribe(userInfo => {
+        console.log(userInfo);
+        this.userInfo = userInfo;
+      })
+      this.userService.getHasConcernedOf(this.videoInfo.authorId).subscribe(res => {
+        this.concerned = res;
+      })
+      this.storage.get('userId').then(value => {
+        this.currentUserId = value;
       })
     })
   }
@@ -119,6 +136,21 @@ export class VideoDetailComponent implements OnInit {
     this.currentInputType = 'reply';
     this.currentCommentMsg = commentInfo;
     this.replyInput.nativeElement.focus();
+  }
+
+  toggleConcernHandler(event, userId) {
+    console.log(event);
+    this.storage.get('userId').then(value => {
+      if (event == 'concern') {
+        this.userService.concern(value, userId).subscribe(() => {
+          //TODO: toastr
+        });
+      } else if (event == 'cancel') {
+        this.userService.cancelConcern(value, userId).subscribe(() => {
+          //TODO: toastr
+        })
+      }
+    })
   }
 
 }

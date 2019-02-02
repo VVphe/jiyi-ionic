@@ -7,6 +7,8 @@ import { HttpClientModule } from '@angular/common/http';
 import { SharedModule } from '../shared/shared.module';
 import { CommentItemComponent } from './comment-item/comment-item.component';
 
+import { IonicModule } from '@ionic/angular';
+
 @NgModule({
   declarations: [
     VideoDetailComponent,
@@ -17,7 +19,8 @@ import { CommentItemComponent } from './comment-item/comment-item.component';
     CommonModule,
     VideoPlayRoutingModule,
     HttpClientModule,
-    SharedModule
+    SharedModule,
+    IonicModule.forRoot(),
   ]
 })
 export class VideoPlayModule { }

@@ -1,0 +1,8 @@
+<div class="userinfo-container">
+  <img [src]="userInfo.avator">
+  <div class="user-description">
+    <div>{{userInfo.username}}</div>
+    <div>{{userInfo.description}}</div>
+  </div>
+  <button class="concern" [ngClass]="{'cancel-concern': concerned}" (click)="concernClick()">{{concerned ? '取消关注' : '关注'}}</button>
+</div>

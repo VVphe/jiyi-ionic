@@ -11,6 +11,7 @@ import { HttpClientModule }    from '@angular/common/http';
 import { SharedModule } from '../shared/shared.module';
 import { FinderComponent } from './finder/finder.component';
 import { ListByCategoryComponent } from './list-by-category/list-by-category.component';
+import { ConcernComponent } from './concern/concern.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,7 @@ import { ListByCategoryComponent } from './list-by-category/list-by-category.com
     LabelBarComponent, 
     RecommendComponent, 
     FinderComponent, 
-    ListByCategoryComponent
+    ListByCategoryComponent, ConcernComponent
   ],
   imports: [
     CommonModule,

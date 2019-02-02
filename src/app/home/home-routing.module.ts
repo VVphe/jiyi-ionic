@@ -5,6 +5,7 @@ import { HomeContentComponent } from './home-content/home-content.component';
 import { RecommendComponent } from './recommend/recommend.component';
 import { FinderComponent } from './finder/finder.component';
 import { ListByCategoryComponent } from './list-by-category/list-by-category.component';
+import { ConcernComponent } from './concern/concern.component';
 
 const routes: Routes = [
     { 
@@ -14,6 +15,7 @@ const routes: Routes = [
             {path: '', redirectTo: 'recommend', pathMatch: 'full'},
             {path: 'recommend', component: RecommendComponent},
             {path: 'finder', component: FinderComponent},
+            {path: 'concern', component: ConcernComponent},
             {path: ':category', component: ListByCategoryComponent}
         ]
     }

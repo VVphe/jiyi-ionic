@@ -12,6 +12,8 @@ import {VgCoreModule} from 'videogular2/core';
 import {VgControlsModule} from 'videogular2/controls';
 import {VgOverlayPlayModule} from 'videogular2/overlay-play';
 import {VgBufferingModule} from 'videogular2/buffering';
+import { UserinfoItemComponent } from './userinfo-item/userinfo-item.component';
+import { VideoItemWithDescComponent } from './video-item-with-desc/video-item-with-desc.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +21,9 @@ import {VgBufferingModule} from 'videogular2/buffering';
     EveryPickComponent,
     VideoItemComponent,
     VideoThumbnailComponent,
-    TranslatePipe
+    TranslatePipe,
+    UserinfoItemComponent,
+    VideoItemWithDescComponent
   ],
   imports: [
     CommonModule,
@@ -34,6 +38,8 @@ import {VgBufferingModule} from 'videogular2/buffering';
     EveryPickComponent,
     VideoItemComponent,
     VideoThumbnailComponent,
+    UserinfoItemComponent,
+    VideoItemWithDescComponent,
     TranslatePipe,
 
     VgCoreModule,

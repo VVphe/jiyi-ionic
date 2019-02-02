@@ -5,6 +5,13 @@
       (showComments)="showCommentsHandler()"
       (like)="likeHandler(videoInfo)"
       (star)="starHandler(videoInfo)"></app-video-play-item>
+    <div class="user-info" *ngIf="userInfo && userInfo.userId != currentUserId">
+      <app-userinfo-item 
+        *ngIf="userInfo" 
+        [userInfo]="userInfo" 
+        [concerned]="concerned"
+        (toggleConcern)="toggleConcernHandler($event, userInfo.userId)"></app-userinfo-item>
+    </div>
     
     <div class="recommend">
       <span>相关推荐</span>
