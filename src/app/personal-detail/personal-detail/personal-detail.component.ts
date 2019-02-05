@@ -1,47 +1,34 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
-  selector: 'app-community',
-  templateUrl: './community.component.html',
-  styleUrls: ['./community.component.scss']
+  selector: 'app-personal-detail',
+  templateUrl: './personal-detail.component.html',
+  styleUrls: ['./personal-detail.component.scss']
 })
-export class CommunityComponent implements OnInit {
+export class PersonalDetailComponent implements OnInit {
 
-  typeList: any;
-  communityVideos: any;
+  personal: any;
+  videos: any;
+  type = 0;
 
-  constructor() { }
+  constructor(private activatedRoute: ActivatedRoute) { }
 
   ngOnInit() {
-    this.typeList = [
-      {
-        type: 'recommend',
-        background: '../../../assets/icon/page-1.png',
-        text: '推荐'
-      },
-      {
-        type: 'nature',
-        background: '../../../assets/icon/page-1.png',
-        text: '日月星光'
-      },
-      {
-        type: 'world',
-        background: '../../../assets/icon/page-1.png',
-        text: '奇妙世界'
-      },
-      {
-        type: 'city',
-        background: '../../../assets/icon/page-1.png',
-        text: '都市'
-      },
-      {
-        type: 'film',
-        background: '../../../assets/icon/page-1.png',
-        text: '电影'
-      }
-    ]
 
-    this.communityVideos = [
+    this.personal = {
+      userId: '1234532532',
+      avator: '../../../assets/icon/page-1.png',
+      username: '蒋鹏威'
+    }
+
+    this.activatedRoute.queryParams.subscribe(params => {
+      if (params.type) {
+        this.type = params.type;
+      }
+    })
+
+    this.videos = [
       {
         avatorUri: '../../../assets/icon/page-1.png',
         title: 'test',
@@ -65,6 +52,10 @@ export class CommunityComponent implements OnInit {
         thumbnailUri: '../../../assets/icon/page-1.png'
       }
     ]
+  }
+
+  changeType(type) {
+    this.type = type;
   }
 
 }

@@ -14,6 +14,9 @@ import {VgOverlayPlayModule} from 'videogular2/overlay-play';
 import {VgBufferingModule} from 'videogular2/buffering';
 import { UserinfoItemComponent } from './userinfo-item/userinfo-item.component';
 import { VideoItemWithDescComponent } from './video-item-with-desc/video-item-with-desc.component';
+import { LabelBarComponent } from './label-bar/label-bar.component';
+import { TabBarComponent } from './tab-bar/tab-bar.component';
+import { RouterModule } from '@angular/router';
 
 @NgModule({
   declarations: [
@@ -23,7 +26,9 @@ import { VideoItemWithDescComponent } from './video-item-with-desc/video-item-wi
     VideoThumbnailComponent,
     TranslatePipe,
     UserinfoItemComponent,
-    VideoItemWithDescComponent
+    VideoItemWithDescComponent,
+    LabelBarComponent,
+    TabBarComponent
   ],
   imports: [
     CommonModule,
@@ -31,7 +36,8 @@ import { VideoItemWithDescComponent } from './video-item-with-desc/video-item-wi
     VgControlsModule,
     VgOverlayPlayModule,
     VgBufferingModule,
-    FormsModule
+    FormsModule,
+    RouterModule
   ],
   exports: [
     VideoListComponent,
@@ -40,6 +46,8 @@ import { VideoItemWithDescComponent } from './video-item-with-desc/video-item-wi
     VideoThumbnailComponent,
     UserinfoItemComponent,
     VideoItemWithDescComponent,
+    LabelBarComponent,
+    TabBarComponent,
     TranslatePipe,
 
     VgCoreModule,

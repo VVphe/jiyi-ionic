@@ -44,3 +44,16 @@
     white-space: normal;
     line-height: 16px;
 }
+
+.video-label {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 4px;
+}
+.video-label > span {
+    margin-right: 8px;
+    background-color: #D8D8D8;
+    border-radius: 4px;
+    color: #0065FF;
+    padding: 4px;
+}

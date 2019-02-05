@@ -3,9 +3,10 @@
     overflow-y: scroll;
 }
 
-// .video-play-container::-webkit-scrollbar {
-//     visibility: hidden;
-// }
+.video-play-container::-webkit-scrollbar {
+    visibility: hidden;
+    width: 0;
+}
 
 .recommend {
     margin: 16px;

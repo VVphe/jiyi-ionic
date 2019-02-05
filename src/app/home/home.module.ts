@@ -1,9 +1,9 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { TabBarComponent } from './common/tab-bar/tab-bar.component';
+// import { TabBarComponent } from './common/tab-bar/tab-bar.component';
 import { HomeContentComponent } from './home-content/home-content.component';
 import { HomeRoutingModule } from './home-routing.module';
-import { LabelBarComponent } from './common/label-bar/label-bar.component';
+// import { LabelBarComponent } from './common/label-bar/label-bar.component';
 import { RouteReuseStrategy } from '@angular/router';
 import { IonicRouteStrategy } from '@ionic/angular';
 import { RecommendComponent } from './recommend/recommend.component';
@@ -15,19 +15,19 @@ import { ConcernComponent } from './concern/concern.component';
 
 @NgModule({
   declarations: [
-    TabBarComponent, 
+    // TabBarComponent, 
     HomeContentComponent, 
-    LabelBarComponent, 
+    // LabelBarComponent, 
     RecommendComponent, 
     FinderComponent, 
-    ListByCategoryComponent, ConcernComponent
+    ListByCategoryComponent, 
+    ConcernComponent
   ],
   imports: [
     CommonModule,
     HomeRoutingModule,
     SharedModule,
-    HttpClientModule,
-    
+    HttpClientModule
   ],
   providers: [
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy }

@@ -9,6 +9,9 @@
   <div class="video-detail">
     <span class="description">{{videoInfo.description}}</span>
   </div>
+  <div class="video-label" *ngIf="videoInfo.labels">
+    <span *ngFor="let label of videoInfo.labels">{{label}}</span>
+  </div>
   <div class="video-list-thumbnail">
     <img [src]="videoInfo.thumbnailUri">
   </div>

@@ -1,8 +1,21 @@
 <div class="main-container">
   <header>
-
+    <div>社区</div>
   </header>
   <main>
-    
+    <div class="type-list-container">
+      <div *ngFor="let type of typeList">
+        <img [src]="type.background">
+        <span>{{type.text}}</span>
+      </div>
+    </div>
+    <div class="community-video-container">
+      <div *ngFor="let video of communityVideos">
+        <app-video-item-with-desc [videoInfo]="video"></app-video-item-with-desc>
+      </div>
+    </div>
   </main>
+  <footer>
+    <app-label-bar></app-label-bar>
+  </footer>
 </div>
