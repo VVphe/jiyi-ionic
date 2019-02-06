@@ -7,7 +7,8 @@ const routes: Routes = [
   { path: 'videoplay', loadChildren: './video-play/video-play.module#VideoPlayModule' },
   { path: 'community', loadChildren: './community/community.module#CommunityModule' },
   { path: 'personal', loadChildren: './personal/personal.module#PersonalModule' },
-  { path: 'personalDetail', loadChildren: './personal-detail/personal-detail.module#PersonalDetailModule' }
+  { path: 'personalDetail', loadChildren: './personal-detail/personal-detail.module#PersonalDetailModule' },
+  { path: 'concernlist', loadChildren: './concern-list/concern-list.module#ConcernListModule' }
 ];
 
 @NgModule({

@@ -38,7 +38,7 @@
     color: #666666;
     display: block;
     margin: 8px 0 0;
-    max-height: 36px;
+    max-height: 32px;
     overflow-y: hidden;
     font-size: 12px;
     white-space: normal;
@@ -48,7 +48,7 @@
 .video-label {
     display: flex;
     flex-direction: row;
-    margin-bottom: 4px;
+    margin: 8px 0;
 }
 .video-label > span {
     margin-right: 8px;

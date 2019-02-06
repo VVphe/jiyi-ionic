@@ -14,8 +14,8 @@ export class UserService {
     return this.http.get(this.nodeUrl + '/users/info', { params });
   }
 
-  getHasConcernedOf(concernedUserId: string): Observable<boolean> {
-    let params = new HttpParams().set('concernedUserId', concernedUserId);
+  getHasConcernedOf(userId, concernedUserId: string): Observable<boolean> {
+    let params = new HttpParams().set('concernedUserId', concernedUserId).set('userId', userId);
     return <Observable<boolean>>this.http.get(this.nodeUrl + '/users/concerned', { params });
   }
 
@@ -34,7 +34,17 @@ export class UserService {
   }
 
   getConcernedListOf(userId) {
-    let params = new HttpParams().set('userId', userId);
+    const params = new HttpParams().set('userId', userId);
     return this.http.get(this.nodeUrl + '/users/concernList', { params });
+  }
+
+  getWorksOf(authorId) {
+    const params = new HttpParams().set('authorId', authorId);
+    return this.http.get(this.nodeUrl + '/users/works', { params });
+  }
+
+  getLikesOf(userId) {
+    const params = new HttpParams().set('userId', userId);
+    return this.http.get(this.nodeUrl + '/users/likes', { params });
   }
 }

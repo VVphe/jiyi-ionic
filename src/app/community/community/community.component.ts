@@ -1,16 +1,18 @@
 import { Component, OnInit } from '@angular/core';
+import { VideoService } from 'src/app/services/video.service';
 
 @Component({
   selector: 'app-community',
   templateUrl: './community.component.html',
-  styleUrls: ['./community.component.scss']
+  styleUrls: ['./community.component.scss'],
+  providers: [VideoService]
 })
 export class CommunityComponent implements OnInit {
 
   typeList: any;
   communityVideos: any;
 
-  constructor() { }
+  constructor(private videoService: VideoService) { }
 
   ngOnInit() {
     this.typeList = [
@@ -41,30 +43,15 @@ export class CommunityComponent implements OnInit {
       }
     ]
 
-    this.communityVideos = [
-      {
-        avatorUri: '../../../assets/icon/page-1.png',
-        title: 'test',
-        subTitle: 'test',
-        description: 'testtesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttest',
-        thumbnailUri: '../../../assets/icon/page-1.png'
-      },
-      {
-        avatorUri: '../../../assets/icon/page-1.png',
-        title: 'test',
-        subTitle: 'test',
-        description: 'testtesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttest',
-        thumbnailUri: '../../../assets/icon/page-1.png',
-        labels: ['日月星光', '星辰大海']
-      },
-      {
-        avatorUri: '../../../assets/icon/page-1.png',
-        title: 'test',
-        subTitle: 'test',
-        description: 'testtesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttest',
-        thumbnailUri: '../../../assets/icon/page-1.png'
-      }
-    ]
+    this.videoService.getCommunityVideos('recommend').subscribe(videos => {
+      this.communityVideos = videos;
+    })
+  }
+
+  chooseLabel(label) {
+    this.videoService.getCommunityVideos(label).subscribe(videos => {
+      this.communityVideos = videos;
+    });
   }
 
 }

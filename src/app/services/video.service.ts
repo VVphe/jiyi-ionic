@@ -137,4 +137,13 @@ export class VideoService {
       videoId: videoId
     })
   }
+
+  getCommunityVideos(label) {
+    if (label == 'recommend') {
+      return this.http.get(this.nodeUrl + '/community/recommend');
+    } else {
+      const params = new HttpParams().set('label', label);
+      return this.http.get(this.nodeUrl + '/community/label', { params });
+    }
+  }
 }

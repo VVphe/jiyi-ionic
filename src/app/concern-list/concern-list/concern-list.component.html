@@ -1,0 +1,12 @@
+<div class="main-container">
+  <header>
+    <div>我的关注</div>
+  </header>
+  <main>
+    <div class="concern-list-container">
+      <div *ngFor="let userInfo of concernedList">
+        <app-userinfo-item [userInfo]="userInfo[0]" [concerned]="'true'" (toggleConcern)="toggleConcernHandler($event, userInfo[0].userId)"></app-userinfo-item>
+      </div>
+    </div>
+  </main>
+</div>

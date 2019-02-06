@@ -4,7 +4,7 @@
   </header>
   <main>
     <div class="type-list-container">
-      <div *ngFor="let type of typeList">
+      <div *ngFor="let type of typeList" (click)="chooseLabel(type.type)">
         <img [src]="type.background">
         <span>{{type.text}}</span>
       </div>

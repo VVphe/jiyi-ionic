@@ -1,6 +1,6 @@
 <div>
   <div class="video-list-header">
-    <img [src]="videoInfo.avatorUri">
+    <img [src]="videoInfo.avatorUri" (click)="showUserInfo($event)">
     <div class="video-desc">
       <span>{{videoInfo.title}}</span>
       <span>{{videoInfo.subTitle}}</span>
@@ -10,7 +10,7 @@
     <span class="description">{{videoInfo.description}}</span>
   </div>
   <div class="video-label" *ngIf="videoInfo.labels">
-    <span *ngFor="let label of videoInfo.labels">{{label}}</span>
+    <span *ngFor="let label of videoInfo.labels">{{labelMap[label]}}</span>
   </div>
   <div class="video-list-thumbnail">
     <img [src]="videoInfo.thumbnailUri">

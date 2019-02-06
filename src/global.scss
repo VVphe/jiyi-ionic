@@ -53,9 +53,18 @@ footer {
 //     height: 228px
 // }
 
+app-personal-detail,
+app-concern-list,
 app-personal,
 app-video-detail,
 app-community,
 app-home-content {
     height: 100%;
+}
+
+app-concern-list .user-description > div:first-child {
+    color: #333333 !important;
+}
+app-concern-list .user-description > div:last-child {
+    color: #999999 !important;
 }

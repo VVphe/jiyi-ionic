@@ -28,7 +28,9 @@ export class VideoItemComponent implements OnInit {
 
   showUserInfo(event: Event) {
     event.stopPropagation()
-    console.log('click');
+    this.router.navigateByUrl(
+      this.router.createUrlTree(['personalDetail/' + this.videoInfo.authorId], { queryParams: { type: 0 } })
+    )
   }
 
 }

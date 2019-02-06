@@ -1,17 +1,17 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { PersonalDetailComponent } from './personal-detail/personal-detail.component';
-import { PersonalDetailRoutingModule } from './personal-detail-routing.module';
+import { ConcernListComponent } from './concern-list/concern-list.component';
 import { SharedModule } from '../shared/shared.module';
+import { ConcernListRoutingModule } from './concern-list-routing.module';
 import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
-  declarations: [PersonalDetailComponent],
+  declarations: [ConcernListComponent],
   imports: [
     CommonModule,
-    PersonalDetailRoutingModule,
     SharedModule,
+    ConcernListRoutingModule,
     HttpClientModule
   ]
 })
-export class PersonalDetailModule { }
+export class ConcernListModule { }

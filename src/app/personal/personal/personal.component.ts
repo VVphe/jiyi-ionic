@@ -44,4 +44,10 @@ export class PersonalComponent implements OnInit {
     )
   }
 
+  goConcerns() {
+    this.router.navigateByUrl(
+      this.router.createUrlTree(['concernlist'])
+    )
+  }
+
 }

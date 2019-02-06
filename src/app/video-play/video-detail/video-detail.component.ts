@@ -59,11 +59,12 @@ export class VideoDetailComponent implements OnInit {
         console.log(userInfo);
         this.userInfo = userInfo;
       })
-      this.userService.getHasConcernedOf(this.videoInfo.authorId).subscribe(res => {
-        this.concerned = res;
-      })
+      
       this.storage.get('userId').then(value => {
         this.currentUserId = value;
+        this.userService.getHasConcernedOf(value, this.videoInfo.authorId).subscribe(res => {
+          this.concerned = res;
+        })
       })
     })
   }
