@@ -1,0 +1,16 @@
+<div class="login-container">
+  <div class="login-form">
+    <div class="userid-container">
+      <i class="icon icon-icon_head_default"></i>
+      <input class="userid" type="text" placeholder="账号" [(ngModel)]="userId">
+    </div>
+    <div class="password-container">
+      <i class="icon icon-icon_edit"></i>
+      <input class="password" type="password" placeholder="密码" [(ngModel)]="password">
+    </div>
+    <button class="login-btn" (click)="login()">登录</button>
+    <div class="register">
+      <span>创建账号</span>
+    </div>
+  </div>
+</div>

@@ -25,7 +25,8 @@ export class PersonalDetailComponent implements OnInit {
       this.personal = {
         userId: info['userId'],
         avator: info['avator'],
-        username: info['username']
+        username: info['username'],
+        description: info['description']
       }
     })
 

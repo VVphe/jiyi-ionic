@@ -1,0 +1,79 @@
+.register-form {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.register-form input {
+    width: 312px;
+    height: 44px;
+    border: 1px solid #FFFFFF;
+    border-radius: 22px;
+    background: transparent;
+    font-size: 14px;
+    color: #FFFFFF;
+    font-weight: 700;
+    padding: 4px 4px 4px 48px;
+    outline: none;
+}
+
+.register-form input::-webkit-input-placeholder {
+    font-size: 14px;
+    color: #FFFFFF;
+    font-weight: 700;
+}
+
+.register-container {
+    height: 100%;
+    background-image: url('../../../assets/icon/page-1.png');
+}
+
+.userid-container,
+.password-container,
+.repeat-container,
+.username-container {
+    position: relative;
+}
+
+.password-container,
+.repeat-container,
+.username-container{
+    margin-top: 8px;
+}
+
+.icon {
+    font-size: 18px;
+    color: #FFFFFF;
+    font-weight: 700;
+    position: absolute;
+    left: 18px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.register-btn {
+    width: 312px;
+    height: 44px;
+    background: linear-gradient(to right, #FFEC86, #E6A102);
+    outline: none;
+    border-radius: 22px;
+    font-size: 16px;
+    color: #FFFFFF;
+    margin-top: 16px;
+    border: none;
+}
+
+.register {
+    width: 312px;
+    margin-top: 16px;
+    position: relative;
+}
+.register > span {
+    font-size: 14px;
+    color: #FFFFFF;
+    position: absolute;
+    right: 16px;
+    font-weight: 700;
+}

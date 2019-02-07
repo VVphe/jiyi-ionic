@@ -47,4 +47,19 @@ export class UserService {
     const params = new HttpParams().set('userId', userId);
     return this.http.get(this.nodeUrl + '/users/likes', { params });
   }
+
+  register(userId, username, password) {
+    return this.http.post(this.nodeUrl + '/users/register', {
+      userId: userId,
+      username: username,
+      password: password
+    });
+  }
+
+  login(userId, password) {
+    return this.http.post(this.nodeUrl + '/users/login', {
+      userId: userId,
+      password: password
+    });
+  }
 }
