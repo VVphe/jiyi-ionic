@@ -7,7 +7,7 @@
     </div>
   </div>
   <div class="finder-category-list">
-    <div *ngFor="let category of categoryList">
+    <div *ngFor="let category of categoryList" (click)="goCategory(category)">
       <img [src]="category.img">
       <span>{{category.name}}</span>
     </div>

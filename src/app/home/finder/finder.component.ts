@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { VideoService } from '../../services/video.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-finder',
@@ -12,7 +13,7 @@ export class FinderComponent implements OnInit {
   categoryList: any;
   rankingVideos: any;
 
-  constructor(private videoServide: VideoService) { }
+  constructor(private videoServide: VideoService, private router: Router) { }
 
   ngOnInit() {
     this.categoryList = [
@@ -45,6 +46,10 @@ export class FinderComponent implements OnInit {
     this.videoServide.getRankingVideos().subscribe(rankingVideos => {
       this.rankingVideos = rankingVideos;
     });
+  }
+
+  goCategory(category) {
+    this.router.navigateByUrl('/home/' + category.tabType);
   }
 
 }

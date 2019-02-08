@@ -1,10 +1,10 @@
 <div>
   <div class="concern-list-container">
     <div class="avator-list">
-      <img [src]="concern[0].avator" *ngFor="let concern of concernList">
+      <img [src]="concern[0].avator" *ngFor="let concern of concernList" (click)="showUserInfo(concern[0].userId)">
     </div>
     
-    <button>全部</button>
+    <button (click)="goConcernList()">全部</button>
   </div>
   <div class="concern-video-container">
     <div *ngFor="let video of concernVideos">

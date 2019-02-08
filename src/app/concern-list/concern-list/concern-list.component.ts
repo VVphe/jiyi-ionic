@@ -38,4 +38,8 @@ export class ConcernListComponent implements OnInit {
     })
   }
 
+  goBack() {
+    history.go(-1);
+  }
+
 }

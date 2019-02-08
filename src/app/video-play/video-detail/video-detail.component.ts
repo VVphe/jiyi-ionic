@@ -154,4 +154,8 @@ export class VideoDetailComponent implements OnInit {
     })
   }
 
+  goBack() {
+    history.go(-1);
+  }
+
 }

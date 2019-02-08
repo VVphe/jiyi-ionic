@@ -76,4 +76,8 @@ export class PersonalDetailComponent implements OnInit {
     }
   }
 
+  goBack() {
+    history.go(-1);
+  }
+
 }

@@ -14,11 +14,18 @@ html {
     // margin-top: 16px;
 }
 
-.video-play-container,
+// .video-play-container,
 .main-container {
     display: flex;
     flex-direction: column;
     padding-top: 20px;
+    height: 100%;
+}
+
+.video-play-container {
+    display: flex;
+    flex-direction: column;
+    // padding-top: 20px;
     height: 100%;
 }
 
@@ -69,4 +76,19 @@ app-concern-list .user-description > div:first-child {
 }
 app-concern-list .user-description > div:last-child {
     color: #999999 !important;
+}
+
+.back {
+    position: absolute;
+    top: 8px;
+    left: 16px;
+    z-index: 1000;
+}
+.back i {
+    font-size: 18px;
+    color: #FFFFFF;
+}
+
+button {
+    outline: none;
 }

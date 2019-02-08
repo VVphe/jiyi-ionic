@@ -31,4 +31,7 @@
   <div class="input" [hidden]="animState != 'show' || currentInputType != 'reply'">
     <input type="text" placeholder="请输入你的回复" (keyup)="publishReply($event)" [(ngModel)]="myReply" #replyInput>
   </div>
+  <div class="back">
+    <i class="icon icon-icon_arrow_left" (click)="goBack()"></i>
+  </div>
 </vg-player>

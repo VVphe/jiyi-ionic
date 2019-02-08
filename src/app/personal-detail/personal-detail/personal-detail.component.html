@@ -1,21 +1,26 @@
-<div *ngIf="personal" class="personal-container">
-  <div class="avator">
-    <img class="avator-bg" [src]="personal.avator">
-    <img class="my-avator" [src]="personal.avator">
-  </div>
-  <div class="personal-basic">
-    <p>{{personal.username}}</p>
-    <p>{{personal.description || '暂无个人说明'}}</p>
-  </div>
-  <div class="tabs">
-    <button [ngClass]="{'select': type == 0}" (click)="changeType(0)">作品</button>
-    <button [ngClass]="{'select': type == 1}" (click)="changeType(1)">收藏</button>
-  </div>
-  <div class="content">
-    <div class="video-container">
-      <div *ngFor="let video of videos">
-        <app-video-item-with-desc [videoInfo]="video"></app-video-item-with-desc>
+<div style="position:absolute; height: 100%; overflow-y: scroll;">
+  <div *ngIf="personal" class="personal-container">
+    <div class="avator">
+      <img class="avator-bg" [src]="personal.avator">
+      <img class="my-avator" [src]="personal.avator">
+    </div>
+    <div class="personal-basic">
+      <p>{{personal.username}}</p>
+      <p>{{personal.description || '暂无个人说明'}}</p>
+    </div>
+    <div class="tabs">
+      <button [ngClass]="{'select': type == 0}" (click)="changeType(0)">作品</button>
+      <button [ngClass]="{'select': type == 1}" (click)="changeType(1)">收藏</button>
+    </div>
+    <div class="content">
+      <div class="video-container">
+        <div *ngFor="let video of videos">
+          <app-video-item-with-desc [videoInfo]="video"></app-video-item-with-desc>
+        </div>
       </div>
     </div>
+  </div>
+  <div class="back">
+    <i class="icon icon-icon_arrow_left" (click)="goBack()"></i>
   </div>
 </div>

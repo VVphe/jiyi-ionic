@@ -12,8 +12,21 @@
     border-bottom: 1px solid rgba(0, 0, 0, 0.1);
 }
 
+header {
+    position: relative;
+}
+
 header div {
     text-align: center;
     font-size: 18px;
+    color: #030303;
+}
+
+.back {
+    position: absolute;
+    left: 0px;
+    top: 0;
+}
+.back i {
     color: #030303;
 }
