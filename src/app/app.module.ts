@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { RouteReuseStrategy } from '@angular/router';
+import { RouteReuseStrategy, Router, Scroll } from '@angular/router';
 import { FormsModule } from '@angular/forms';
 
 import { IonicModule, IonicRouteStrategy } from '@ionic/angular';
@@ -12,6 +12,8 @@ import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
+import { CustomReuseStrategy } from './app-routing.cache';
+import { ViewportScroller } from '@angular/common';
 
 @NgModule({
   declarations: [AppComponent],
@@ -32,4 +34,18 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
   ],
   bootstrap: [AppComponent]
 })
-export class AppModule {}
+export class AppModule {
+  // constructor(router: Router, viewportScroller: ViewportScroller, store: Store<AppState>) {
+  //   router.events.pipe(filter(e => e instanceof Scroll), switchMap(e => {
+  //     return store.pipe(first(), timeout(200), map(() => e));
+  //   }).subscribe(e => {
+  //     if (e.position) {
+  //       viewportScroller.scrollToPosition(e.position);
+  //     } else if (e.anchor) {
+  //       viewportScroller.scrollToAnchor(e.anchor);
+  //     } else {
+  //       viewportScroller.scrollToPosition([0, 0]);
+  //     }
+  //   });
+  // }
+}

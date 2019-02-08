@@ -28,6 +28,7 @@
     display: flex;
     flex-direction: row;
     overflow-x: scroll;
+    overflow-y: hidden;
     border-bottom:  1px solid rgba(0,0,0,0.10);
 }
 .finder-category-list > div {
