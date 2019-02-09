@@ -128,6 +128,7 @@ export class VideoDetailComponent implements OnInit {
             this.comments.unshift(res);
             this.commentCount = res.commentCount;
             this.myReply = '';
+            this.currentInputType = 'comment';
           });
       })
     }
