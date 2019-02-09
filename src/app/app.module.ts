@@ -12,8 +12,9 @@ import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
-import { CustomReuseStrategy } from './app-routing.cache';
 import { ViewportScroller } from '@angular/common';
+import { CustomReuseStrategy } from './app-routing.cache';
+
 
 @NgModule({
   declarations: [AppComponent],
@@ -38,11 +39,11 @@ export class AppModule {
   // constructor(router: Router, viewportScroller: ViewportScroller, store: Store<AppState>) {
   //   router.events.pipe(filter(e => e instanceof Scroll), switchMap(e => {
   //     return store.pipe(first(), timeout(200), map(() => e));
-  //   }).subscribe(e => {
-  //     if (e.position) {
-  //       viewportScroller.scrollToPosition(e.position);
-  //     } else if (e.anchor) {
-  //       viewportScroller.scrollToAnchor(e.anchor);
+  //   })).subscribe(e => {
+  //     if (e['position']) {
+  //       viewportScroller.scrollToPosition(e['position']);
+  //     } else if (e['anchor']) {
+  //       viewportScroller.scrollToAnchor(e['anchor']);
   //     } else {
   //       viewportScroller.scrollToPosition([0, 0]);
   //     }

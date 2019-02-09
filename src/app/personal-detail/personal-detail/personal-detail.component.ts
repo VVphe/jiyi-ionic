@@ -1,6 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { UserService } from 'src/app/services/user.service';
+import { Storage } from '@ionic/storage';
 
 @Component({
   selector: 'app-personal-detail',
@@ -17,7 +18,13 @@ export class PersonalDetailComponent implements OnInit {
   works = null;
   likes = null;
 
-  constructor(private activatedRoute: ActivatedRoute, private userService: UserService) { }
+  editedDesc: any;
+  showEdit = false;
+
+  @ViewChild('descInput')
+  descInput: ElementRef;
+
+  constructor(private activatedRoute: ActivatedRoute, private userService: UserService, private storage: Storage) { }
 
   ngOnInit() {
 
@@ -78,6 +85,26 @@ export class PersonalDetailComponent implements OnInit {
 
   goBack() {
     history.go(-1);
+  }
+
+  editDesc() {
+    this.storage.get('userId').then(value => {
+      if (value == this.personal.userId) {
+        this.showEdit = true;
+        this.descInput.nativeElement.focus();
+      }
+    })
+  }
+
+  finishEdit() {
+    if (this.editedDesc == this.personal.description || !this.editedDesc) {
+      return;
+    }
+    this.userService.updateDesc(this.personal.userId, this.editedDesc).subscribe(() => {
+      this.showEdit = false;
+      this.personal.description = this.editedDesc;
+      this.editedDesc = '';
+    })
   }
 
 }

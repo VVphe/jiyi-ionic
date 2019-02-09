@@ -15,7 +15,9 @@ export class ListByCategoryComponent implements OnInit {
   popularVideos: any;
   latestVideos: any;
 
-  constructor(private routerInfo: ActivatedRoute, private videoService: VideoService) { }
+  constructor(private routerInfo: ActivatedRoute, private videoService: VideoService) { 
+    
+  }
 
   ngOnInit() {
     let category = this.routerInfo.snapshot.params['category'];
@@ -29,6 +31,7 @@ export class ListByCategoryComponent implements OnInit {
     this.videoService.getLatestVideos(category).subscribe(videos => {
       this.latestVideos = videos;
     });
+    // this.routerScrollService.componentLoaded();
   }
 
 }

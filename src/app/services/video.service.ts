@@ -146,4 +146,9 @@ export class VideoService {
       return this.http.get(this.nodeUrl + '/community/label', { params });
     }
   }
+
+  getConcernVideosOf(userId) {
+    const params = new HttpParams().set('userId', userId);
+    return this.http.get(this.nodeUrl + '/users/concernVideos', { params });
+  }
 }

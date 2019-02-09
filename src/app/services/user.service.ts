@@ -62,4 +62,11 @@ export class UserService {
       password: password
     });
   }
+
+  updateDesc(userId, description) {
+    return this.http.post(this.nodeUrl + '/users/desc/update', {
+      userId: userId,
+      description: description
+    });
+  }
 }
