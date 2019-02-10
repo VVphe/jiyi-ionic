@@ -14,6 +14,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
 import { ViewportScroller } from '@angular/common';
 import { CustomReuseStrategy } from './app-routing.cache';
+import { ImagePicker } from '@ionic-native/image-picker/ngx';
 
 
 @NgModule({
@@ -30,6 +31,7 @@ import { CustomReuseStrategy } from './app-routing.cache';
   providers: [
     StatusBar,
     SplashScreen,
+    ImagePicker,
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy },
     { provide: 'nodeUrl', useValue: 'http://localhost:5000' }
   ],

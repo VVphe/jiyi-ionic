@@ -2,12 +2,14 @@ import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { UserService } from 'src/app/services/user.service';
 import { Storage } from '@ionic/storage';
+import { ImagePickerService } from 'src/app/services/image-picker.service';
+import { ImagePicker } from '@ionic-native/image-picker/ngx';
 
 @Component({
   selector: 'app-personal-detail',
   templateUrl: './personal-detail.component.html',
   styleUrls: ['./personal-detail.component.scss'],
-  providers: [UserService]
+  providers: [UserService, ImagePickerService, ImagePicker]
 })
 export class PersonalDetailComponent implements OnInit {
 
@@ -24,7 +26,7 @@ export class PersonalDetailComponent implements OnInit {
   @ViewChild('descInput')
   descInput: ElementRef;
 
-  constructor(private activatedRoute: ActivatedRoute, private userService: UserService, private storage: Storage) { }
+  constructor(private activatedRoute: ActivatedRoute, private userService: UserService, private storage: Storage, private imagePickerService: ImagePickerService) { }
 
   ngOnInit() {
 
@@ -107,6 +109,12 @@ export class PersonalDetailComponent implements OnInit {
         this.editedDesc = '';
       })
     }
+  }
+
+  selectAcator() {
+    this.imagePickerService.imgPicker().then(results => {
+      console.log(results);
+    })
   }
 
 }

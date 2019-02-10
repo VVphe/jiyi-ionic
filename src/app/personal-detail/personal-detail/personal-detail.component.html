@@ -2,7 +2,7 @@
   <div *ngIf="personal" class="personal-container">
     <div class="avator">
       <img class="avator-bg" [src]="personal.avator">
-      <img class="my-avator" [src]="personal.avator">
+      <img class="my-avator" [src]="personal.avator" (click)="selectAcator()">
     </div>
     <div class="personal-basic">
       <p>{{personal.username}}</p>
