@@ -97,14 +97,16 @@ export class PersonalDetailComponent implements OnInit {
   }
 
   finishEdit() {
-    if (this.editedDesc == this.personal.description || !this.editedDesc) {
-      return;
-    }
-    this.userService.updateDesc(this.personal.userId, this.editedDesc).subscribe(() => {
+    if (this.editedDesc == this.personal.description || this.editedDesc == '') {
       this.showEdit = false;
-      this.personal.description = this.editedDesc;
       this.editedDesc = '';
-    })
+    } else {
+      this.userService.updateDesc(this.personal.userId, this.editedDesc).subscribe(() => {
+        this.showEdit = false;
+        this.personal.description = this.editedDesc;
+        this.editedDesc = '';
+      })
+    }
   }
 
 }
