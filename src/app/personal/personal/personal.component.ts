@@ -50,4 +50,11 @@ export class PersonalComponent implements OnInit {
     )
   }
 
+  goUserInfo() {
+    console.log(1);
+    this.router.navigateByUrl(
+      this.router.createUrlTree(['personalDetail/' + this.userId], { queryParams: { type: 0 } })
+    )
+  }
+
 }

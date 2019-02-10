@@ -4,6 +4,7 @@ import { UserService } from 'src/app/services/user.service';
 import { Storage } from '@ionic/storage';
 import { ImagePickerService } from 'src/app/services/image-picker.service';
 import { ImagePicker } from '@ionic-native/image-picker/ngx';
+import { ActionSheetController } from '@ionic/angular';
 
 @Component({
   selector: 'app-personal-detail',
@@ -23,10 +24,18 @@ export class PersonalDetailComponent implements OnInit {
   editedDesc: any;
   showEdit = false;
 
+  currentUserId: string;
+
   @ViewChild('descInput')
   descInput: ElementRef;
 
-  constructor(private activatedRoute: ActivatedRoute, private userService: UserService, private storage: Storage, private imagePickerService: ImagePickerService) { }
+  constructor(
+    private activatedRoute: ActivatedRoute, 
+    private userService: UserService, 
+    private storage: Storage, 
+    private imagePickerService: ImagePickerService,
+    private actionSheetController: ActionSheetController
+  ) { }
 
   ngOnInit() {
 
@@ -50,6 +59,10 @@ export class PersonalDetailComponent implements OnInit {
       } else {
         this.getWorks();
       }
+    })
+
+    this.storage.get('userId').then(value => {
+      this.currentUserId = value;
     })
 
   }
@@ -111,10 +124,34 @@ export class PersonalDetailComponent implements OnInit {
     }
   }
 
-  selectAcator() {
-    this.imagePickerService.imgPicker().then(results => {
-      console.log(results);
-    })
+  async selectAcator() {
+    // this.imagePickerService.imgPicker().then(results => {
+    //   console.log(results);
+    // })
+    if (this.currentUserId != this.personal.userId) {
+      return;
+    }
+    const actionSheet = await this.actionSheetController.create({
+      header: '更换头像',
+      buttons: [{
+        text: '从相册选择',
+        icon: 'images',
+        handler: () => {
+          this.imagePickerService.imgPicker().then(results => {
+            console.log(results);
+          })
+        }
+      }, {
+        text: '取消',
+        role: 'close',
+        icon: 'close',
+        handler: () => {
+          console.log('cancel');
+        }
+      }]
+    });
+
+    await actionSheet.present();
   }
 
 }
