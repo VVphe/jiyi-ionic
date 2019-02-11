@@ -1,4 +1,4 @@
-import { Component, OnInit, Input, Output, EventEmitter, HostListener } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter, HostListener, Inject } from '@angular/core';
 import { Router } from '@angular/router';
 
 @Component({
@@ -17,6 +17,8 @@ export class UserinfoItemComponent implements OnInit {
   @Output()
   toggleConcern = new EventEmitter();
 
+  avatorUrl: string;
+
   @HostListener('click')
   onClick() {
     this.router.navigateByUrl(
@@ -24,10 +26,10 @@ export class UserinfoItemComponent implements OnInit {
     )
   }
 
-  constructor(private router: Router) { }
+  constructor(private router: Router, @Inject('nodeUrl') private nodeUrl) { }
 
   ngOnInit() {
-    console.log(this.userInfo, this.concerned);
+    this.avatorUrl = this.nodeUrl + '/users/avator/' + this.userInfo.userId;
   }
 
   concernClick(event: Event) {

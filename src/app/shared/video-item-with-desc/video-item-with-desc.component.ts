@@ -1,4 +1,4 @@
-import { Component, OnInit, Input, HostListener } from '@angular/core';
+import { Component, OnInit, Input, HostListener, Inject } from '@angular/core';
 import { Router } from '@angular/router';
 
 @Component({
@@ -22,7 +22,7 @@ export class VideoItemWithDescComponent implements OnInit {
     );
   }
 
-  constructor(private router: Router) { }
+  constructor(private router: Router, @Inject('nodeUrl') private nodeUrl) { }
 
   ngOnInit() {
     this.labelMap = {

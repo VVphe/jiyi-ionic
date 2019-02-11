@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Inject } from '@angular/core';
 import { Storage } from '@ionic/storage';
 import { Router } from '@angular/router';
 
@@ -11,8 +11,9 @@ export class PersonalComponent implements OnInit {
 
   personal: any;
   userId: any;
+  avatorUrl: string
 
-  constructor(private storage: Storage, private router: Router) { }
+  constructor(private storage: Storage, private router: Router, @Inject('nodeUrl') private nodeUrl) { }
 
   ngOnInit() {
     Promise.all(
@@ -28,7 +29,10 @@ export class PersonalComponent implements OnInit {
         username: values[1],
         avator: values[2]
       }
+      this.avatorUrl = this.nodeUrl + '/users/avator/' + this.userId;
     })
+
+    
   }
 
   goWorks() {

@@ -1,8 +1,8 @@
 <div style="position:absolute; height: 100%; overflow-y: scroll; width: 100%;">
   <div *ngIf="personal" class="personal-container">
     <div class="avator">
-      <img class="avator-bg" [src]="personal.avator == '../../../assets/icon/default-head.svg' ? '../../../assets/icon/default-bg.png' : personal.avator">
-      <img class="my-avator" [src]="personal.avator" (click)="selectAcator()">
+      <img class="avator-bg" [src]="personal.avator == '../../../assets/icon/default-head.svg' ? '../../../assets/icon/default-bg.png' : avatorUrl">
+      <img class="my-avator" [src]="avatorUrl" (click)="selectAcator()">
     </div>
     <div class="personal-basic">
       <p>{{personal.username}}</p>

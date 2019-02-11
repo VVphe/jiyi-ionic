@@ -1,4 +1,4 @@
-import { Component, OnInit, Input, HostListener } from '@angular/core';
+import { Component, OnInit, Input, HostListener, Inject } from '@angular/core';
 import { Router } from '@angular/router';
 import { NavController } from '@ionic/angular';
 
@@ -22,7 +22,7 @@ export class VideoItemComponent implements OnInit {
     );
   }
 
-  constructor(private router: Router) { }
+  constructor(private router: Router, @Inject('nodeUrl') private nodeUrl) { }
 
   ngOnInit() {
   }

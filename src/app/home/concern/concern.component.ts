@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Inject } from '@angular/core';
 import { UserService } from 'src/app/services/user.service';
 import { Storage } from '@ionic/storage';
 import { Router } from '@angular/router';
@@ -15,7 +15,7 @@ export class ConcernComponent implements OnInit {
   concernList: any;
   concernVideos: any;
 
-  constructor(private userService: UserService, private storage: Storage, private router: Router, private videoService: VideoService) { }
+  constructor(private userService: UserService, private storage: Storage, private router: Router, private videoService: VideoService, @Inject('nodeUrl') private nodeUrl) { }
 
   ngOnInit() {
     this.storage.get('userId').then(value => {
@@ -27,30 +27,6 @@ export class ConcernComponent implements OnInit {
         this.concernVideos = list ? list[0] : [];
       })
     })
-
-    // this.concernVideos = [
-    //   {
-    //     avatorUri: '../../../assets/icon/page-1.png',
-    //     title: 'test',
-    //     subTitle: 'test',
-    //     description: 'testtesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttest',
-    //     thumbnailUri: '../../../assets/icon/page-1.png'
-    //   },
-    //   {
-    //     avatorUri: '../../../assets/icon/page-1.png',
-    //     title: 'test',
-    //     subTitle: 'test',
-    //     description: 'testtesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttest',
-    //     thumbnailUri: '../../../assets/icon/page-1.png'
-    //   },
-    //   {
-    //     avatorUri: '../../../assets/icon/page-1.png',
-    //     title: 'test',
-    //     subTitle: 'test',
-    //     description: 'testtesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttest',
-    //     thumbnailUri: '../../../assets/icon/page-1.png'
-    //   }
-    // ]
   }
 
   showUserInfo(userId) {

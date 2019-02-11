@@ -3,9 +3,9 @@
     <div class="personal-basic">
       <img 
         class="avator-bg" 
-        [src]="personal.avator == '../../../assets/icon/default-head.svg' ? '../../../assets/icon/default-bg.png' : personal.avator">
+        [src]="personal.avator == '../../../assets/icon/default-head.svg' ? '../../../assets/icon/default-bg.png' : avatorUrl">
       <div class="basic">
-        <img [src]="personal.avator" (click)="goUserInfo()">
+        <img [src]="avatorUrl" (click)="goUserInfo()">
         <span>{{personal.username}}</span>
       </div>
       <div class="operates">

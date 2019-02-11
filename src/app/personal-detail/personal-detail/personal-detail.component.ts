@@ -1,4 +1,4 @@
-import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
+import { Component, OnInit, ViewChild, ElementRef, Inject, NgZone } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { UserService } from 'src/app/services/user.service';
 import { Storage } from '@ionic/storage';
@@ -8,12 +8,13 @@ import { ActionSheetController } from '@ionic/angular';
 import { Base64 } from '@ionic-native/base64/ngx';
 import { File } from '@ionic-native/file/ngx';
 import { FileUploadOptions, FileTransfer, FileTransferObject } from '@ionic-native/file-transfer/ngx';
+import { ToastService } from 'src/app/services/toast.service';
 
 @Component({
   selector: 'app-personal-detail',
   templateUrl: './personal-detail.component.html',
   styleUrls: ['./personal-detail.component.scss'],
-  providers: [UserService, ImagePickerService, ImagePicker]
+  providers: [UserService, ImagePickerService, ImagePicker, ToastService]
 })
 export class PersonalDetailComponent implements OnInit {
 
@@ -29,6 +30,8 @@ export class PersonalDetailComponent implements OnInit {
 
   currentUserId: string;
 
+  avatorUrl: string;
+
   @ViewChild('descInput')
   descInput: ElementRef;
 
@@ -40,7 +43,10 @@ export class PersonalDetailComponent implements OnInit {
     private actionSheetController: ActionSheetController,
     private base64: Base64,
     private transfer: FileTransfer,
-    private File: File
+    private File: File,
+    private toastService: ToastService,
+    private zone: NgZone,
+    @Inject('nodeUrl') private nodeUrl
   ) { }
 
   ngOnInit() {
@@ -69,6 +75,7 @@ export class PersonalDetailComponent implements OnInit {
 
     this.storage.get('userId').then(value => {
       this.currentUserId = value;
+      this.avatorUrl = this.nodeUrl + '/users/avator/' + this.currentUserId;
     })
 
   }
@@ -144,19 +151,6 @@ export class PersonalDetailComponent implements OnInit {
         icon: 'images',
         handler: () => {
           this.imagePickerService.imgPicker().then(results => {
-            console.log(results);
-            // let postData = {
-            //   name: results[0].name,
-            //   // base64: "data:image/jpeg;base64," + results[0]
-            //   base64: ''
-            // }
-            // this.base64.encodeFile(results[0]).then(base64File => {
-            //   console.log(base64File);
-            //   postData.base64 = base64File;
-            //   this.userService.uploadAvator(postData).subscribe(() => {
-            //     console.log('success');
-            //   })
-            // })
             const fileTransfer: FileTransferObject = this.transfer.create();
             let options: FileUploadOptions = {
               fileKey: 'imgFile',
@@ -168,9 +162,12 @@ export class PersonalDetailComponent implements OnInit {
               },
               // headers: {'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'}
             };
-            fileTransfer.upload(results[0], 'http://localhost:5000/upload/avator', options)
+            fileTransfer.upload(results[0], this.nodeUrl + '/upload/avator', options)
               .then((data) => {
-                console.log(data);
+                this.zone.run(() => {
+                  this.avatorUrl = this.nodeUrl + '/users/avator/' + this.currentUserId + '?random+\=' + Math.random();
+                  this.toastService.create('修改头像成功咯');
+                })
               });
           })
         }
@@ -188,3 +185,5 @@ export class PersonalDetailComponent implements OnInit {
   }
 
 }
+
+// Probably The End~

@@ -1,7 +1,7 @@
 <div>
   <div class="concern-list-container">
     <div class="avator-list">
-      <img [src]="concern[0].avator" *ngFor="let concern of concernList" (click)="showUserInfo(concern[0].userId)">
+      <img [src]="nodeUrl + '/users/avator/' + concern[0].userId" *ngFor="let concern of concernList" (click)="showUserInfo(concern[0].userId)">
     </div>
     
     <button (click)="goConcernList()">全部</button>
