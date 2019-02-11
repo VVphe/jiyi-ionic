@@ -15,6 +15,9 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
 import { ViewportScroller } from '@angular/common';
 import { CustomReuseStrategy } from './app-routing.cache';
 import { ImagePicker } from '@ionic-native/image-picker/ngx';
+import { Base64 } from '@ionic-native/base64/ngx';
+import { FileTransfer } from '@ionic-native/file-transfer/ngx';
+import { File } from '@ionic-native/file/ngx';
 
 
 @NgModule({
@@ -32,6 +35,9 @@ import { ImagePicker } from '@ionic-native/image-picker/ngx';
     StatusBar,
     SplashScreen,
     ImagePicker,
+    Base64,
+    FileTransfer,
+    File,
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy },
     { provide: 'nodeUrl', useValue: 'http://localhost:5000' }
   ],

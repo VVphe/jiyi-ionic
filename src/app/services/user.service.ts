@@ -69,4 +69,8 @@ export class UserService {
       description: description
     });
   }
+
+  uploadAvator(postData) {
+    return this.http.post(this.nodeUrl + '/upload/avator', postData);
+  }
 }

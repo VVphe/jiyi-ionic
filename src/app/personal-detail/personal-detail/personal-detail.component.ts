@@ -5,6 +5,9 @@ import { Storage } from '@ionic/storage';
 import { ImagePickerService } from 'src/app/services/image-picker.service';
 import { ImagePicker } from '@ionic-native/image-picker/ngx';
 import { ActionSheetController } from '@ionic/angular';
+import { Base64 } from '@ionic-native/base64/ngx';
+import { File } from '@ionic-native/file/ngx';
+import { FileUploadOptions, FileTransfer, FileTransferObject } from '@ionic-native/file-transfer/ngx';
 
 @Component({
   selector: 'app-personal-detail',
@@ -34,7 +37,10 @@ export class PersonalDetailComponent implements OnInit {
     private userService: UserService, 
     private storage: Storage, 
     private imagePickerService: ImagePickerService,
-    private actionSheetController: ActionSheetController
+    private actionSheetController: ActionSheetController,
+    private base64: Base64,
+    private transfer: FileTransfer,
+    private File: File
   ) { }
 
   ngOnInit() {
@@ -139,6 +145,33 @@ export class PersonalDetailComponent implements OnInit {
         handler: () => {
           this.imagePickerService.imgPicker().then(results => {
             console.log(results);
+            // let postData = {
+            //   name: results[0].name,
+            //   // base64: "data:image/jpeg;base64," + results[0]
+            //   base64: ''
+            // }
+            // this.base64.encodeFile(results[0]).then(base64File => {
+            //   console.log(base64File);
+            //   postData.base64 = base64File;
+            //   this.userService.uploadAvator(postData).subscribe(() => {
+            //     console.log('success');
+            //   })
+            // })
+            const fileTransfer: FileTransferObject = this.transfer.create();
+            let options: FileUploadOptions = {
+              fileKey: 'imgFile',
+              fileName: 'avator.jpg',
+              mimeType: "image/jpeg'",
+              httpMethod: "POST",
+              params: {
+                userId: this.currentUserId
+              },
+              // headers: {'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'}
+            };
+            fileTransfer.upload(results[0], 'http://localhost:5000/upload/avator', options)
+              .then((data) => {
+                console.log(data);
+              });
           })
         }
       }, {
