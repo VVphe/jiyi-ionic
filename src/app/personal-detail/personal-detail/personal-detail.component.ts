@@ -185,5 +185,3 @@ export class PersonalDetailComponent implements OnInit {
   }
 
 }
-
-// Probably The End~

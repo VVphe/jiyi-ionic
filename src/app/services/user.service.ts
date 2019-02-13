@@ -73,4 +73,9 @@ export class UserService {
   uploadAvator(postData) {
     return this.http.post(this.nodeUrl + '/upload/avator', postData);
   }
+
+  getNotificationOf(userId) {
+    const params = new HttpParams().set('userId', userId);
+    return this.http.get(this.nodeUrl + '/users/notification', { params });
+  }
 }

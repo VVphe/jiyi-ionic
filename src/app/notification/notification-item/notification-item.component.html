@@ -1,0 +1,14 @@
+<div class="notification-container">
+  <img [src]="nodeUrl + '/users/avator/' + notification.userId">
+  <div class="detail">
+    <div class="userInfo" (click)="goUserInfo()">
+      <p>{{notification.username}}</p>
+      <p *ngIf="notification.type=='star'">喜欢了我的作品</p>
+      <p *ngIf="notification.type=='like'">收藏了我的作品</p>
+    </div>
+    <div class="videoInfo" *ngIf="notification.videoInfo" (click)="goVideoInfo()">
+      <img [src]="notification.videoInfo.thumbnailUri">
+      <div>{{notification.videoInfo.title}}</div>
+    </div>
+  </div>
+</div>
