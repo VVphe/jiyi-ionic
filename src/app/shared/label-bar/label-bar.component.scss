@@ -1,6 +1,7 @@
 #label-container {
     display: flex;
     flex-direction: row;
+    position: relative;
 }
 
 #label-container > div {
@@ -16,4 +17,11 @@
 
 .active {
     color: #FFA600;
+}
+
+.icon-icon_add_circle {
+    color: #FFA600;
+    position: relative;
+    // top: 8px;
+    font-size: 36px !important;
 }

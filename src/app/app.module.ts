@@ -39,7 +39,7 @@ import { File } from '@ionic-native/file/ngx';
     FileTransfer,
     File,
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy },
-    { provide: 'nodeUrl', useValue: 'http://localhost:5000' }
+    { provide: 'nodeUrl', useValue: 'http://192.168.31.38:5000' }
   ],
   bootstrap: [AppComponent]
 })

@@ -18,7 +18,7 @@ html {
 .main-container {
     display: flex;
     flex-direction: column;
-    padding-top: 20px;
+    padding-top: 36px;
     height: 100%;
 }
 
@@ -50,7 +50,7 @@ main {
 footer {
     flex: 0 1 auto;
     width: 100%;
-    padding: 8px 0;
+    padding: 8px 0 24px 0;
     background: rgba(250,250,250,0.90);
     box-shadow: inset 0 0 0 0 rgba(0,0,0,0.25);
 }
@@ -87,7 +87,8 @@ app-concern-list .user-description > div:last-child {
 }
 .back i {
     font-size: 18px;
-    color: #FFFFFF;
+    color: #FFA600 !important;
+    font-weight: 800;
 }
 
 i,
