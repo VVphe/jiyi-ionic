@@ -22,9 +22,13 @@
   </div>
 
   <div class="recommends-list" [@commentAnim]="animState">
-    <div class="count">{{commentCount}}条评论</div>
-    <i class="icon icon-icon_close_line" (click)="closeCommentList()"></i>
-    <app-comment-item *ngFor="let commentInfo of comments" [commentInfo]="commentInfo" (reply)="replyHandler(commentInfo)"></app-comment-item>
+    <div class="list-title">
+      <div class="count">{{commentCount}}条评论</div>
+      <i class="icon icon-icon_close_line" (click)="closeCommentList()"></i>
+    </div>
+    <div class="list-body">
+      <app-comment-item *ngFor="let commentInfo of comments" [commentInfo]="commentInfo" (reply)="replyHandler(commentInfo)"></app-comment-item>
+    </div>
   </div>
   <div class="input" *ngIf="animState == 'show' && currentInputType == 'comment'">
     <input type="text" placeholder="请输入你的评论" (keyup)="publishComment($event)" [(ngModel)]="myComment">

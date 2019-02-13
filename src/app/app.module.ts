@@ -19,6 +19,8 @@ import { Base64 } from '@ionic-native/base64/ngx';
 import { FileTransfer } from '@ionic-native/file-transfer/ngx';
 import { File } from '@ionic-native/file/ngx';
 import { Keyboard } from '@ionic-native/keyboard/ngx';
+import { Camera } from '@ionic-native/camera/ngx';
+import { VideoCapturePlus } from "@ionic-native/video-capture-plus/ngx";
 
 
 @NgModule({
@@ -40,6 +42,8 @@ import { Keyboard } from '@ionic-native/keyboard/ngx';
     FileTransfer,
     File,
     Keyboard,
+    Camera,
+    VideoCapturePlus,
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy },
     { provide: 'nodeUrl', useValue: 'http://192.168.31.38:5000' }
   ],
