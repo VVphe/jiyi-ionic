@@ -1,6 +1,6 @@
 <div>
   <div class="comment">
-    <img [src]="commentInfo.avator">
+    <img [src]="nodeUrl + '/users/avator/' + commentInfo.userId">
     <div *ngIf="commentInfo.type == 'comment'">
       <span class="username">{{commentInfo.username}}</span>
       <span class="content">{{commentInfo.content}}</span>
@@ -13,7 +13,7 @@
         <span class="username">{{commentInfo.username}} 回复 {{commentInfo.commentUsername}}</span>
         <span class="content">{{commentInfo.content}}</span>
         <div class="reply-info">
-          <img [src]="commentInfo.commentAvator">
+          <img [src]="nodeUrl + '/users/avator/' + commentInfo.commentUserId">
           <div>
             <span>{{commentInfo.commentUsername}}</span>
             <span>{{commentInfo.commentContent}}</span>

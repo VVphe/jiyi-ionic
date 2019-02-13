@@ -159,4 +159,8 @@ export class VideoDetailComponent implements OnInit {
     history.go(-1);
   }
 
+  closeCommentList() {
+    this.animState = 'hide';
+  }
+
 }
