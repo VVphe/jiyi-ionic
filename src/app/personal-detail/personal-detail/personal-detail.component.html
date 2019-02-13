@@ -7,7 +7,7 @@
     <div class="personal-basic">
       <p>{{personal.username}}</p>
       <p (click)="editDesc()" class="desc">{{personal.description || '暂无个人说明'}}</p>
-      <input type="text" class="edit-desc" placeholder="点击编辑个性签名" #descInput [(ngModel)]="editedDesc" [hidden]="!showEdit" (blur)="finishEdit()">
+      <input type="text" class="edit-desc" placeholder="点击编辑个性签名" #descInput [(ngModel)]="editedDesc" [hidden]="!showEdit" (keyup)="finishEdit($event)">
     </div>
     <div class="tabs">
       <button [ngClass]="{'select': type == 0}" (click)="changeType(0)">作品</button>
