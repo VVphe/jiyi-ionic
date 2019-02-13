@@ -18,6 +18,7 @@ import { ImagePicker } from '@ionic-native/image-picker/ngx';
 import { Base64 } from '@ionic-native/base64/ngx';
 import { FileTransfer } from '@ionic-native/file-transfer/ngx';
 import { File } from '@ionic-native/file/ngx';
+import { Keyboard } from '@ionic-native/keyboard/ngx';
 
 
 @NgModule({
@@ -38,6 +39,7 @@ import { File } from '@ionic-native/file/ngx';
     Base64,
     FileTransfer,
     File,
+    Keyboard,
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy },
     { provide: 'nodeUrl', useValue: 'http://192.168.31.38:5000' }
   ],

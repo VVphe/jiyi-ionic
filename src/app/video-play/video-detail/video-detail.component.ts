@@ -6,6 +6,7 @@ import { CommentsService } from 'src/app/services/comments.service';
 import { Storage } from "@ionic/storage";
 import { ViewChild, ElementRef } from "@angular/core";
 import { UserService } from 'src/app/services/user.service';
+import { Keyboard } from '@ionic-native/keyboard/ngx';
 
 @Component({
   selector: 'app-video-detail',
@@ -42,7 +43,8 @@ export class VideoDetailComponent implements OnInit {
     private userService: UserService,
     private activatedRoute: ActivatedRoute,
     private commentsService: CommentsService,
-    private storage: Storage
+    private storage: Storage,
+    private keyBoard: Keyboard
   ) { }
 
   ngOnInit() {
@@ -113,6 +115,7 @@ export class VideoDetailComponent implements OnInit {
             this.myComment = '';
           });
       })
+      this.keyBoard.hide();
     }
   }
 
@@ -131,6 +134,7 @@ export class VideoDetailComponent implements OnInit {
             this.currentInputType = 'comment';
           });
       })
+      this.keyBoard.hide();
     }
   }
 

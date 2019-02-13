@@ -9,6 +9,7 @@ import { Base64 } from '@ionic-native/base64/ngx';
 import { File } from '@ionic-native/file/ngx';
 import { FileUploadOptions, FileTransfer, FileTransferObject } from '@ionic-native/file-transfer/ngx';
 import { ToastService } from 'src/app/services/toast.service';
+import { Keyboard } from '@ionic-native/keyboard/ngx';
 
 @Component({
   selector: 'app-personal-detail',
@@ -46,6 +47,7 @@ export class PersonalDetailComponent implements OnInit {
     private File: File,
     private toastService: ToastService,
     private zone: NgZone,
+    private keyBoard: Keyboard,
     @Inject('nodeUrl') private nodeUrl
   ) { }
 
@@ -136,6 +138,7 @@ export class PersonalDetailComponent implements OnInit {
           this.editedDesc = '';
         })
       }
+      this.keyBoard.hide();
     }
   }
 
