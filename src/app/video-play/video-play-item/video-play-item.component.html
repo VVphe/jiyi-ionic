@@ -2,7 +2,7 @@
   <div class="video-play-item-container">
     <div class="video-entity">
       <img [src]="videoInfo.thumbnailUri" *ngIf="!isPlaying">
-      <i class="icon icon-arrow-ios-forward-ou" (click)="play()"></i>
+      <i class="icon icon-play-circle-outline" (click)="play()"></i>
     </div>
     <video 
       [hidden]="!isPlaying"

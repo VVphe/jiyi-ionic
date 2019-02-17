@@ -89,9 +89,9 @@ app-concern-list .user-description > div:last-child {
 .back i {
     font-size: 24px !important;
     color: #FFA600 !important;
-    font-weight: 800;
-    transform: rotate(180deg);
-    display: inline-block;
+    font-weight: 800 !important;
+    transform: rotate(180deg) !important;
+    display: inline-block !important;
 }
 
 i,

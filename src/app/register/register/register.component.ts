@@ -48,4 +48,8 @@ export class RegisterComponent implements OnInit {
     }
   }
 
+  goBack() {
+    history.go(-1);
+  }
+
 }

@@ -30,6 +30,7 @@
     background-image: url('../../../assets/icon/login-bg@3x.png');
     background-repeat: no-repeat; 
     background-size: 100% 100%;
+    position: relative;
 }
 
 .userid-container,
@@ -78,4 +79,9 @@
     position: absolute;
     right: 16px;
     font-weight: 700;
+}
+
+.back {
+    top: 16px;
+    left: 0;
 }

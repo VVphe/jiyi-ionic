@@ -20,27 +20,27 @@ export class FinderComponent implements OnInit {
       {
         name: '校园',
         tabType: 'campus',
-        img: '../../../assets/icon/page-1.png'
+        img: '../../../assets/icon/campus.jpeg'
       },
       {
         name: '科技',
         tabType: 'technology',
-        img: '../../../assets/icon/page-1.png'
+        img: '../../../assets/icon/technology.jpg'
       },
       {
         name: '生活',
         tabType: 'life',
-        img: '../../../assets/icon/page-1.png'
+        img: '../../../assets/icon/life.jpeg'
       },
       {
         name: '音乐',
         tabType: 'music',
-        img: '../../../assets/icon/page-1.png'
+        img: '../../../assets/icon/music.jpeg'
       },
       {
         name: '运动',
         tabType: 'sport',
-        img: '../../../assets/icon/page-1.png'
+        img: '../../../assets/icon/sport.jpg'
       },
     ]
     this.videoServide.getRankingVideos().subscribe(rankingVideos => {
