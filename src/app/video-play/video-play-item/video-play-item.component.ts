@@ -1,4 +1,4 @@
-import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter, Inject } from '@angular/core';
 import { VgAPI } from 'videogular2/core';
 
 @Component({
@@ -29,7 +29,7 @@ export class VideoPlayItemComponent implements OnInit {
   isPlaying = false;
   api: VgAPI;
 
-  constructor() { }
+  constructor(@Inject('nodeUrl') private nodeUrl) { }
 
   ngOnInit() {
   }

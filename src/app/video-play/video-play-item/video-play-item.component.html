@@ -13,7 +13,7 @@
       controls 
       style="height:224px;width:100%;"
       [ngStyle]="{'z-index': isPlaying ? 2 : 1}">
-      <source [src]="videoInfo.videoUri" type="video/mp4">
+      <source [src]="nodeUrl + '/video/' + videoInfo.videoUri" type="video/mp4">
     </video>
     <div class="video-detail">
       <span class="title">{{videoInfo.title}}</span>
