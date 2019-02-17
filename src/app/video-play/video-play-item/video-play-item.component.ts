@@ -11,6 +11,12 @@ export class VideoPlayItemComponent implements OnInit {
   @Input()
   videoInfo: any;
 
+  @Input()
+  stared: boolean;
+
+  @Input()
+  liked: boolean;
+
   @Output()
   showComments = new EventEmitter();
 
@@ -45,10 +51,12 @@ export class VideoPlayItemComponent implements OnInit {
 
   likeClick() {
     this.like.emit();
+    this.liked = true;
   }
 
   starClick() {
     this.star.emit();
+    this.stared = true;
   }
 
 }

@@ -7,13 +7,14 @@ import { Storage } from "@ionic/storage";
 import { ViewChild, ElementRef } from "@angular/core";
 import { UserService } from 'src/app/services/user.service';
 import { Keyboard } from '@ionic-native/keyboard/ngx';
+import { ToastService } from 'src/app/services/toast.service';
 
 @Component({
   selector: 'app-video-detail',
   templateUrl: './video-detail.component.html',
   styleUrls: ['./video-detail.component.scss'],
   animations: [commentAnim],
-  providers: [VideoService, CommentsService, UserService]
+  providers: [VideoService, CommentsService, UserService, ToastService]
 })
 export class VideoDetailComponent implements OnInit {
 
@@ -35,6 +36,8 @@ export class VideoDetailComponent implements OnInit {
 
   userInfo: any;
   concerned: boolean;
+  stared: boolean;
+  liked: boolean;
 
   currentUserId;
 
@@ -44,7 +47,8 @@ export class VideoDetailComponent implements OnInit {
     private activatedRoute: ActivatedRoute,
     private commentsService: CommentsService,
     private storage: Storage,
-    private keyBoard: Keyboard
+    private keyBoard: Keyboard,
+    private toastService: ToastService
   ) { }
 
   ngOnInit() {
@@ -67,6 +71,12 @@ export class VideoDetailComponent implements OnInit {
         this.userService.getHasConcernedOf(value, this.videoInfo.authorId).subscribe(res => {
           this.concerned = res;
         })
+        this.userService.getHasStaredOf(value, this.videoInfo.id).subscribe(res => {
+          this.stared = res;
+        })
+        this.userService.getHasLikedOf(value, this.videoInfo.id).subscribe(res => {
+          this.liked = res;
+        })
       })
     })
   }
@@ -79,6 +89,10 @@ export class VideoDetailComponent implements OnInit {
   }
 
   likeHandler(videoInfo) {
+    if (this.liked) {
+      this.toastService.create('您已收藏该作品咯');
+      return;
+    }
     let _videoInfo = {};
     for (let key in videoInfo) {
       if (key != '__id' && key != '_id') {
@@ -96,6 +110,10 @@ export class VideoDetailComponent implements OnInit {
   }
 
   starHandler(videoInfo) {
+    if (this.stared) {
+      this.toastService.create('您已点赞该作品咯');
+      return;
+    }
     this.storage.get('userId').then(value => {
       this.videoService.starVideo(value, videoInfo.id).subscribe();
     })
@@ -149,11 +167,11 @@ export class VideoDetailComponent implements OnInit {
     this.storage.get('userId').then(value => {
       if (event == 'concern') {
         this.userService.concern(value, userId).subscribe(() => {
-          //TODO: toastr
+          this.toastService.create('关注成功');
         });
       } else if (event == 'cancel') {
         this.userService.cancelConcern(value, userId).subscribe(() => {
-          //TODO: toastr
+          this.toastService.create('取消关注成功');
         })
       }
     })

@@ -18,22 +18,22 @@ export class CommunityComponent implements OnInit {
     this.typeList = [
       {
         type: 'recommend',
-        background: '../../../assets/icon/page-1.png',
+        background: '../../../assets/icon/Group 6@3x.png',
         text: '推荐'
       },
       {
         type: 'nature',
-        background: '../../../assets/icon/page-1.png',
+        background: '../../../assets/icon/Group 6 Copy@3x.png',
         text: '日月星光'
       },
       {
         type: 'world',
-        background: '../../../assets/icon/page-1.png',
+        background: '../../../assets/icon/Group 6 Copy 2@3x.png',
         text: '奇妙世界'
       },
       {
         type: 'city',
-        background: '../../../assets/icon/page-1.png',
+        background: '../../../assets/icon/Group 6 Copy 3@3x.png',
         text: '都市'
       },
       {

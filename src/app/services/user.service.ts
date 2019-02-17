@@ -19,6 +19,16 @@ export class UserService {
     return <Observable<boolean>>this.http.get(this.nodeUrl + '/users/concerned', { params });
   }
 
+  getHasStaredOf(userId, videoId): Observable<boolean> {
+    let params = new HttpParams().set('videoId', videoId).set('userId', userId);
+    return <Observable<boolean>>this.http.get(this.nodeUrl + '/users/stared', { params });
+  }
+
+  getHasLikedOf(userId, videoId): Observable<boolean> {
+    let params = new HttpParams().set('videoId', videoId).set('userId', userId);
+    return <Observable<boolean>>this.http.get(this.nodeUrl + '/users/liked', { params });
+  }
+
   concern(userId, concernedUserId) {
     return this.http.post(this.nodeUrl + '/operates/concern', {
       userId: userId, 

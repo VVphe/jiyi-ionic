@@ -2,6 +2,8 @@
   <div class="video-play-container">
     <app-video-play-item
       [videoInfo]="videoInfo" 
+      [stared]="stared"
+      [liked]="liked"
       (showComments)="showCommentsHandler()"
       (like)="likeHandler(videoInfo)"
       (star)="starHandler(videoInfo)"></app-video-play-item>

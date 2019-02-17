@@ -2,7 +2,7 @@
   <div class="video-play-item-container">
     <div class="video-entity">
       <img [src]="videoInfo.thumbnailUri" *ngIf="!isPlaying">
-      <i class="icon icon-icon_arrow_right" (click)="play()"></i>
+      <i class="icon icon-arrow-ios-forward-ou" (click)="play()"></i>
     </div>
     <video 
       [hidden]="!isPlaying"
@@ -21,11 +21,11 @@
       <div class="operations">
         <div (click)="starClick()">
             <i class="icon icon-heart-outline"></i>
-            <span>点赞</span>
+            <span>{{stared ? '已点赞' : '点赞'}}</span>
         </div>
         <div (click)="likeClick()">
             <i class="icon icon-share-outline"></i>
-            <span>收藏</span>
+            <span>{{liked ? '已收藏' : '收藏'}}</span>
         </div>
         <div (click)="showCommentsClick()">
             <i class="icon icon-message-square-outli1"></i>
