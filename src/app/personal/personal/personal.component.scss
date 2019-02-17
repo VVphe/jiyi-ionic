@@ -87,7 +87,7 @@ main {
     align-items: center;
 }
 .operates > div {
-    border-bottom: 1px solid rgba(0,0,0,0.10);
+    // border-bottom: 1px solid rgba(0,0,0,0.10);
 }
 .operates > div > i {
     font-size: 24px;
@@ -95,4 +95,28 @@ main {
 .operates > div > span {
     font-size: 12px;
     color: #030303;
+}
+
+.icon-collection,
+.icon-concern,
+.icon-works {
+    width: 24px;
+    height: 24px;
+    background-repeat: no-repeat; 
+    background-size: 100% 100%;
+    margin-bottom: 8px;
+}
+
+.icon-works {
+    background-image: url('../../../assets/icon/view@3x.png');
+}
+.icon-collection {
+    background-image: url('../../../assets/icon/collect@3x.png');
+}
+.icon-concern {
+    background-image: url('../../../assets/icon/attention@3x.png');
+}
+
+.icon-arrow-ios-forward-ou {
+    font-size: 16px !important;
 }

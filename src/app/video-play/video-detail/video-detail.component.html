@@ -24,7 +24,7 @@
   <div class="recommends-list" [@commentAnim]="animState">
     <div class="list-title">
       <div class="count">{{commentCount}}条评论</div>
-      <i class="icon icon-icon_close_line" (click)="closeCommentList()"></i>
+      <i class="icon icon-close-outline" (click)="closeCommentList()"></i>
     </div>
     <div class="list-body">
       <app-comment-item *ngFor="let commentInfo of comments" [commentInfo]="commentInfo" (reply)="replyHandler(commentInfo)"></app-comment-item>
@@ -37,6 +37,6 @@
     <input type="text" placeholder="请输入你的回复" (keyup)="publishReply($event)" [(ngModel)]="myReply" #replyInput>
   </div>
   <div class="back">
-    <i class="icon icon-icon_arrow_left" (click)="goBack()"></i>
+    <i class="icon icon-arrow-ios-forward-ou" (click)="goBack()"></i>
   </div>
 </vg-player>
