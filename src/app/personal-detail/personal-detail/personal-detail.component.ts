@@ -60,6 +60,7 @@ export class PersonalDetailComponent implements OnInit {
         username: info['username'],
         description: info['description']
       }
+      this.avatorUrl = this.nodeUrl + '/users/avator/' + info['userId'];
     })
 
     this.activatedRoute.queryParams.subscribe(params => {
@@ -77,7 +78,6 @@ export class PersonalDetailComponent implements OnInit {
 
     this.storage.get('userId').then(value => {
       this.currentUserId = value;
-      this.avatorUrl = this.nodeUrl + '/users/avator/' + this.currentUserId;
     })
 
   }
