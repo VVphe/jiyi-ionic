@@ -12,8 +12,10 @@
       preload="auto" 
       controls 
       style="height:224px;width:100%;"
-      [ngStyle]="{'z-index': isPlaying ? 2 : 1}">
+      [ngStyle]="{'z-index': isPlaying ? 2 : 1}"
+      crossorigin playsinline>
       <source [src]="nodeUrl + '/video/' + videoInfo.videoUri" type="video/mp4">
+      <!-- <source [src]="'/Users/apple/WebApps/jiyi/videos/' + videoInfo.videoUri" type="video/mpeg4"> -->
     </video>
     <div class="video-detail">
       <span class="title">{{videoInfo.title}}</span>

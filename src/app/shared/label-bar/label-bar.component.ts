@@ -40,7 +40,19 @@ export class LabelBarComponent implements OnInit {
         icon: 'images',
         handler: () => {
           this.cameraService.getVideo().then(results => {
-            console.log(results);
+            const fileTransfer: FileTransferObject = this.transfer.create();
+            let options: FileUploadOptions = {
+              fileKey: 'videoFile',
+              fileName: 'video.mp4',
+              mimeType: "video/mpeg4",
+              httpMethod: "POST"
+              // headers: {'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'}
+            };
+            fileTransfer.upload(results[0], this.nodeUrl + '/upload/video', options)
+              .then((data) => {
+                // this.avatorUrl = this.nodeUrl + '/users/avator/' + this.currentUserId + '?random+\=' + Math.random();
+                // this.toastService.create('修改头像成功咯');
+              });
           })
         }
       }, {

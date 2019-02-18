@@ -160,7 +160,7 @@ export class PersonalDetailComponent implements OnInit {
             let options: FileUploadOptions = {
               fileKey: 'imgFile',
               fileName: 'avator.jpg',
-              mimeType: "image/jpeg'",
+              mimeType: "image/jpeg",
               httpMethod: "POST",
               params: {
                 userId: this.currentUserId
