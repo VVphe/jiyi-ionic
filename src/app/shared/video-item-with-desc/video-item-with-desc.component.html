@@ -13,6 +13,6 @@
     <span *ngFor="let label of videoInfo.labels">{{labelMap[label]}}</span>
   </div>
   <div class="video-list-thumbnail">
-    <img [src]="videoInfo.thumbnailUri">
+    <img [src]="nodeUrl + '/video/thumbnail/' + videoInfo.thumbnailUri">
   </div>
 </div>

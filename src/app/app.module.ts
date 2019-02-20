@@ -45,7 +45,7 @@ import { VideoCapturePlus } from "@ionic-native/video-capture-plus/ngx";
     Camera,
     VideoCapturePlus,
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy },
-    { provide: 'nodeUrl', useValue: 'http://192.168.1.102:5000' }
+    { provide: 'nodeUrl', useValue: 'http://192.168.1.104:5000' }
   ],
   bootstrap: [AppComponent]
 })

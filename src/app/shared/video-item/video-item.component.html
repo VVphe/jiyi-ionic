@@ -1,6 +1,6 @@
 <div>
   <div class="video-list-thumbnail">
-    <img [src]="videoInfo.thumbnailUri">
+    <img [src]="nodeUrl + '/video/thumbnail/' + videoInfo.thumbnailUri">
   </div>
   <div class="video-list-footer">
     <img [src]="nodeUrl + '/users/avator/' + videoInfo.authorId" (click)="showUserInfo($event)">

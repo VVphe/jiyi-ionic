@@ -1,7 +1,7 @@
 <vg-player (onPlayerReady)="onPlayerReady($event)">
   <div class="video-play-item-container">
     <div class="video-entity">
-      <img [src]="videoInfo.thumbnailUri" *ngIf="!isPlaying">
+      <img [src]="nodeUrl + '/video/thumbnail/' + videoInfo.thumbnailUri" *ngIf="!isPlaying">
       <i class="icon icon-play-circle-outline" (click)="play()"></i>
     </div>
     <video 

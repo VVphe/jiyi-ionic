@@ -7,7 +7,7 @@
       <p *ngIf="notification.type=='like'">收藏了我的作品</p>
     </div>
     <div class="videoInfo" *ngIf="notification.videoInfo" (click)="goVideoInfo()">
-      <img [src]="notification.videoInfo.thumbnailUri">
+      <img [src]="nodeUrl + '/video/thumbnail/' + notification.videoInfo.thumbnailUri">
       <div>{{notification.videoInfo.title}}</div>
     </div>
   </div>
