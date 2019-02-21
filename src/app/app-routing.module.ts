@@ -12,6 +12,7 @@ const routes: Routes = [
   { path: 'personalDetail', loadChildren: './personal-detail/personal-detail.module#PersonalDetailModule' },
   { path: 'concernlist', loadChildren: './concern-list/concern-list.module#ConcernListModule' },
   { path: 'notification', loadChildren: './notification/notification.module#NotificationModule' },
+  { path: 'upload', loadChildren: './upload/upload.module#UploadModule' }
 ];
 
 @NgModule({
