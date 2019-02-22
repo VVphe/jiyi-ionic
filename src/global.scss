@@ -69,7 +69,8 @@ app-personal,
 app-video-detail,
 app-community,
 app-home-content,
-app-notification {
+app-notification,
+app-upload {
     height: 100%;
 }
 
@@ -97,4 +98,10 @@ app-concern-list .user-description > div:last-child {
 i,
 button {
     outline: none;
+}
+
+input,
+textarea {
+    -webkit-appearance: none ;
+    box-shadow: none;
 }

@@ -24,7 +24,15 @@ export class ConcernComponent implements OnInit {
       });
 
       this.videoService.getConcernVideosOf(value).subscribe(list => {
-        this.concernVideos = list ? list[0] : [];
+        let videoList = [];
+        if (list) {
+          for(let i = 0; i < list['length']; i++) {
+            for (let j = 0; j < list[i].length; j++) {
+              videoList.push(list[i][j]);
+            }
+          }
+        }
+        this.concernVideos = list ? videoList : [];
       })
     })
   }

@@ -1,9 +1,10 @@
-import { Component, OnInit, Inject } from '@angular/core';
+import { Component, OnInit, Inject, NgZone } from '@angular/core';
 import { ActionSheetController } from '@ionic/angular';
 import { ImagePickerService } from 'src/app/services/image-picker.service';
 import { FileTransferObject, FileTransfer, FileUploadOptions } from '@ionic-native/file-transfer/ngx';
 import { Camera } from '@ionic-native/camera/ngx';
 import { CameraService } from 'src/app/services/camera.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-label-bar',
@@ -13,11 +14,15 @@ import { CameraService } from 'src/app/services/camera.service';
 })
 export class LabelBarComponent implements OnInit {
 
+  inProgress = false;
+  progress: number;
+
   constructor(
     private actionSheetController: ActionSheetController, 
-    private imagePickerService: ImagePickerService,
+    private router: Router,
     private transfer: FileTransfer,
     private cameraService: CameraService,
+    private zone: NgZone,
     @Inject('nodeUrl') private nodeUrl
   ) { }
 
@@ -51,9 +56,26 @@ export class LabelBarComponent implements OnInit {
             };
             fileTransfer.upload(JSON.stringify(results).substring(8, JSON.stringify(results).length - 1), this.nodeUrl + '/upload/video', options)
               .then((data) => {
-                // this.avatorUrl = this.nodeUrl + '/users/avator/' + this.currentUserId + '?random+\=' + Math.random();
-                // this.toastService.create('修改头像成功咯');
+                console.log(data);
+                this.router.navigate(['/upload'], {
+                  queryParams: {
+                    videoId: data.response
+                  }
+                });
               });
+            fileTransfer.onProgress((progressEvent) => {
+              if (progressEvent.lengthComputable) {
+                this.zone.run(() => {
+                  this.inProgress = true;
+                  this.progress = Math.floor(progressEvent.loaded / progressEvent.total * 100);
+                  if (this.progress >= 100) {
+                    this.progress = 0;
+                    this.inProgress = false;
+                  }
+                })
+                
+              }
+            })
           })
         }
       }, {

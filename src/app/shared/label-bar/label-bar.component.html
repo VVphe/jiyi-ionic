@@ -1,4 +1,7 @@
 <div id="label-container">
+  <span class="progress" *ngIf="inProgress">
+    视频上传中 - {{progress}}%
+  </span>
   <div>
     <i class="icon icon-globe--outlinex"
     [routerLink]="[ '/home' ]"

@@ -1,0 +1,63 @@
+header {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 18px;
+}
+header > span {
+    flex: 1;
+    font-weight: 700;
+}
+
+header > span:last-child {
+    text-align: right;
+}
+header > span:nth-child(2) {
+    text-align: center;
+    font-size: 18px;
+    color: rgb(3, 3, 3);
+}
+
+header > span:first-child,
+header > span:last-child {
+    font-size: 14px;
+    color: rgb(255, 166, 0);
+}
+
+img {
+    border-radius: 3px;
+    margin-bottom: 16px;
+    width: 100%;
+    height: 200px;
+}
+
+main p {
+    margin: 0 0 4px;
+}
+
+main input {
+    width: 100%;
+    height: 40px;
+    font-size: 14px;
+    color: #333333;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 4px;
+    margin-bottom: 8px;
+    padding: 4px 8px;
+    outline: none;
+}
+
+main textarea {
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    width: 100%;
+    height: 72px;
+    border-radius: 4px;
+    padding: 4px 8px;
+    font-size: 14px;
+    color: #333333;
+    outline: none;
+}
+
+main input:focus,
+main textarea:focus {
+    border: 1px solid rgb(255, 166, 0);
+}
