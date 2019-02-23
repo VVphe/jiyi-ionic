@@ -26,5 +26,8 @@
 }
 
 .active {
-    border-bottom: 2px solid #FFA600;
+    border-bottom: 2px solid #FFEC86;
+    // border-image: -webkit-linear-gradient(#FFEC86, #E6A102) 30 30;
+    // border-image: -moz-linear-gradient(#FFEC86, #E6A102) 30 30;
+    // border-image: linear-gradient(#FFEC86, #E6A102) 30 30;
 }
