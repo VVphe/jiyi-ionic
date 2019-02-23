@@ -17,6 +17,7 @@ import { VideoItemWithDescComponent } from './video-item-with-desc/video-item-wi
 import { LabelBarComponent } from './label-bar/label-bar.component';
 import { TabBarComponent } from './tab-bar/tab-bar.component';
 import { RouterModule } from '@angular/router';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -37,7 +38,7 @@ import { RouterModule } from '@angular/router';
     VgOverlayPlayModule,
     VgBufferingModule,
     FormsModule,
-    RouterModule
+    RouterModule,
   ],
   exports: [
     VideoListComponent,

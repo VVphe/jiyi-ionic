@@ -21,6 +21,7 @@ header > span:first-child,
 header > span:last-child {
     font-size: 14px;
     color: rgb(255, 166, 0);
+    padding-top: 2px;
 }
 
 img {
@@ -60,4 +61,10 @@ main textarea {
 main input:focus,
 main textarea:focus {
     border: 1px solid rgb(255, 166, 0);
+}
+
+.upload-container {
+    position: absolute;
+    height: 100%;
+    width: 100%;
 }

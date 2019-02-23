@@ -56,7 +56,7 @@ export class LabelBarComponent implements OnInit {
             };
             fileTransfer.upload(JSON.stringify(results).substring(8, JSON.stringify(results).length - 1), this.nodeUrl + '/upload/video', options)
               .then((data) => {
-                console.log(data);
+                console.log('videoData',data);
                 this.router.navigate(['/upload'], {
                   queryParams: {
                     videoId: data.response

@@ -101,10 +101,12 @@ export class VideoDetailComponent implements OnInit {
     }
     this.storage.get('userId').then(value => {
       if (value == _videoInfo['authorId']) {
-        console.log('这是您的作品哦');
+        this.toastService.create('这是您的作品哦');
       } else {
         _videoInfo['userId'] = value;
         this.videoService.likeVideo(_videoInfo).subscribe();
+        this.liked = true;
+        this.toastService.create('收藏成功咯');
       }
     })
   }
@@ -116,6 +118,7 @@ export class VideoDetailComponent implements OnInit {
     }
     this.storage.get('userId').then(value => {
       this.videoService.starVideo(value, videoInfo.id).subscribe();
+      this.toastService.create('点赞成功咯');
     })
   }
 

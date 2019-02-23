@@ -143,4 +143,8 @@ export class VideoService {
     const params = new HttpParams().set('userId', userId);
     return this.http.get(this.nodeUrl + '/users/concernVideos', { params });
   }
+
+  publishVideo(videoInfo) {
+    return this.http.post(this.nodeUrl + '/operates/publish', videoInfo);
+  }
 }

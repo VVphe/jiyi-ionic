@@ -1,8 +1,8 @@
 <div class="main-container upload-container">
   <header>
-    <span>取消</span>
+    <span (click)="cancel()">取消</span>
     <span>选择视频</span>
-    <span>发布</span>
+    <span (click)="publish()">发布</span>
   </header>
   <main>
     <img *ngIf="thumbnailUri" [src]="thumbnailUri">

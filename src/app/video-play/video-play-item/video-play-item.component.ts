@@ -51,7 +51,7 @@ export class VideoPlayItemComponent implements OnInit {
 
   likeClick() {
     this.like.emit();
-    this.liked = true;
+    // this.liked = true;
   }
 
   starClick() {
