@@ -37,7 +37,36 @@ export class LabelBarComponent implements OnInit {
         icon: 'camera',
         handler: () => {
           this.cameraService.record().then(results => {
-            console.log(results);
+            const fileTransfer: FileTransferObject = this.transfer.create();
+            let options: FileUploadOptions = {
+              fileKey: 'videoFile',
+              fileName: 'video.mp4',
+              mimeType: "video/mp4",
+              httpMethod: "POST"
+              // headers: {'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'}
+            };
+            fileTransfer.upload(results[0].fullPath, this.nodeUrl + '/upload/video', options)
+              .then((data) => {
+                console.log('videoData',data);
+                this.router.navigate(['/upload'], {
+                  queryParams: {
+                    videoId: data.response
+                  }
+                });
+              });
+            fileTransfer.onProgress((progressEvent) => {
+              if (progressEvent.lengthComputable) {
+                this.zone.run(() => {
+                  this.inProgress = true;
+                  this.progress = Math.floor(progressEvent.loaded / progressEvent.total * 100);
+                  if (this.progress >= 100) {
+                    this.progress = 0;
+                    this.inProgress = false;
+                  }
+                })
+                
+              }
+            })
           })
         }
       } ,{
@@ -45,7 +74,6 @@ export class LabelBarComponent implements OnInit {
         icon: 'images',
         handler: () => {
           this.cameraService.getVideo().then(results => {
-            console.log(JSON.stringify(results), JSON.stringify(results).length);
             const fileTransfer: FileTransferObject = this.transfer.create();
             let options: FileUploadOptions = {
               fileKey: 'videoFile',

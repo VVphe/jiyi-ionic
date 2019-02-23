@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { VideoService } from '../../services/video.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-recommend',
@@ -12,7 +13,7 @@ export class RecommendComponent implements OnInit {
   everydayPickVideo: any;
   videoList: any;
 
-  constructor(private videoService: VideoService) { }
+  constructor(private videoService: VideoService, private router: Router) { }
 
   ngOnInit() {
     this.videoService.getEverydayVideo().subscribe(everydayPickVideo => {
@@ -22,6 +23,10 @@ export class RecommendComponent implements OnInit {
     this.videoService.getCategoryVideos().subscribe(videoList => {
       this.videoList = videoList;
     });
+  }
+
+  goCategory(category) {
+    this.router.navigateByUrl('/home/' + category);
   }
 
 }
